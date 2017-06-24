@@ -1,0 +1,14 @@
+{
+  "name": "Postmodern",
+  "version": "0.2.0",
+  "description": "WordPress Theme",
+  "scripts": {
+    "build": "node-sass --output-style compressed -o ./ style.scss && postcss --use autoprefixer --replace ./style.css",
+    "watch": "node-sass -w --output-style compressed -o ./ style.scss"
+  },
+  "author": "Marcus Kazmierczak",
+  "license": "GPL",
+  "devDependencies": {
+    "stylelint-no-unsupported-browser-features": "^1.0.0"
+  }
+}
