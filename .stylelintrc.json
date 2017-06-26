@@ -6,6 +6,7 @@
     "rules": {
         "block-no-empty": null,
         "color-no-invalid-hex": true,
+        "color-hex-case": "upper",
         "comment-empty-line-before": "always",
 
         "declaration-colon-space-after": "always",
@@ -18,6 +19,7 @@
         } ],
 
         "max-empty-lines": 2,
+        "length-zero-no-unit": true,
 
         "no-duplicate-selectors": true,
         "no-empty-source": true,
@@ -35,6 +37,12 @@
             "browsers": [ ">5%", "Last 2 versions", "not op_mini all" ],
             "ignore": [ "rem" ]
         } ],
+
+        "selector-pseudo-class-no-unknown": true,
+        "selector-pseudo-element-no-unknown": true,
+
+        "string-no-newline": true,
+        "string-quotes":"single",
 
         "unit-whitelist": ["px", "em", "rem", "%", "s", "deg"]
     }
