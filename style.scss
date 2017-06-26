@@ -17,12 +17,12 @@
 ----------------------------------------------------------------------------------- */
 
 
-$bg_color: #EEEEEE;
+$bg_color: #FEFEEE;
 $bg_color_content: white;
 
-$fg_color: #444;
+$fg_color: #333;
 
-$link_color: #3D9970;
+$link_color: #111;
 $link_hover: #FF4136;
 
 $font_main: 'Roboto', sans-serif;
@@ -124,7 +124,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 a, a:visited {
     color: $link_color;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover {
@@ -150,13 +150,14 @@ blockquote p { font-style: italic; }
 blockquote cite:before { content: '— '; }
 
 .wrapper {
-    margin: 0 auto;
+    margin: 0;
+    padding-left: 10%;
     max-width: 90%;
     width: $content_width;
 }
 
 header {
-    margin: 0 auto 100px auto;
+    margin-bottom: 100px;
     width: 90%;
     border-bottom: 1px solid $border_color;
 }
@@ -166,27 +167,44 @@ header h2 {
     font-weight: 700;
     margin-top: 40px;
     margin-bottom: 8px;
-    text-align: center;
 }
 
 header p {
     font-size: 85%;
     margin-top: 0;
-    text-align: center;
 }
 
 article {
     display: block;
+    margin-bottom: 64px;
 }
 
 .title {
-    line-height: 1.4;
-    text-align: center;
+    line-height: 1.0;   /* keep multiline titles tight */
 }
+
+.title a, .title a:visited {
+    text-decoration: none;
+}
+
+.title a:hover {
+    text-decoration: underline;
+}
+
 
 .featured-image {
     display: block;
     margin: 0 auto 30px auto;
+}
+
+.excerpt-featured {
+    width: 100%;
+    height: 100%;
+    min-height: 120px;
+    max-height: 360px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .meta {
@@ -199,10 +217,12 @@ article {
 
 .meta a, .meta a:visited {
     color: #222;
+    text-decoration: none;
 }
 
 .meta a:hover {
     color: $link_hover;
+    text-decoration: underline;
 }
 
 span.post-date,
@@ -475,8 +495,14 @@ footer p {
     text-align: center;
 }
 
-@media ( max-width: 620px ) {
-    body { font-size: 16px; }
+@media ( max-width: 720px ) {
+    .wrapper {
+        padding-left: 5%;
+    }
+
+    body {
+        font-size: 18px;
+    }
 
     .toggle-menu {
         font-size: 14px;
@@ -520,6 +546,14 @@ footer p {
 }
 
 @media ( max-width: 500px ) {
+    .wrapper {
+        padding-left: 4%;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
     .post:before,
     .comments:before,
     .comment-respond:before,

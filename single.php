@@ -8,13 +8,13 @@
     </head>
 
     <body <?php body_class(); ?>>
-
-        <header>
-            <h2><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></h2>
-            <p><?php bloginfo( 'description' ); ?></p>
-        </header>
-
         <div class="wrapper">
+
+            <header>
+                <h2><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></h2>
+                <p><?php bloginfo( 'description' ); ?></p>
+            </header>
+
             <?php if ( have_posts() ) :
                 while ( have_posts() ) : the_post();
                     get_template_part( 'content' );
