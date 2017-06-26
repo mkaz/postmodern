@@ -7,9 +7,9 @@
 <article <?php post_class( 'post'); ?>>
 
     <?php if ( has_post_thumbnail() ) : ?>
-        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="featured-image">
-            <?php the_post_thumbnail( 'post-image' ); ?>
-        </a>
+        <figure class="full-width">
+            <img src="<?php the_post_thumbnail_url( 'post-image' ); ?>"  title="<?php the_title_attribute(); ?>"  class="featured-image"/>
+        </figure>
     <?php endif; ?>
 
     <h1 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
