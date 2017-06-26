@@ -117,13 +117,11 @@ em { font-style: italic; }
 
 .content > ol, .content > ul { margin-bottom: 30px; }
 
-.post ol, .post ul { margin-left: 1.5rem; }
-
 .post ul { list-style: disc; }
 
-.post ul ul { list-style: circle; }
+.post ul ul { list-style: square; }
 
-.post ul ul ul { list-style: square; }
+.post ul ul ul { list-style: circle; }
 
 .post ol { list-style: decimal; }
 
