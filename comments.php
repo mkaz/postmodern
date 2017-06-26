@@ -2,7 +2,7 @@
 
     <div class="comments">
 
-        <h3 class="comment-reply-title"><?php _e( 'Comments', 'postmodern' ) ?></h3>
+        <h4 class="comment-reply-title"><?php _e( 'Comments', 'postmodern' ) ?></h4>
 
         <?php wp_list_comments(array( 'style' => 'div')); ?>
 
