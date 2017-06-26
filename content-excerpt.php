@@ -6,12 +6,18 @@
 
 <article <?php post_class( 'post'); ?>>
 
-    <h2 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-
     <?php if ( has_post_thumbnail() ) : ?>
-        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="featured-image">
-            <?php the_post_thumbnail( 'post-image' ); ?>
-        </a>
+        <div class="excerpt-featured"
+            style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) ), url(<?php echo the_post_thumbnail_url(); ?>)"
+        >
+            <h2 class="featured-title">
+                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+            </h2>
+        </div>
+    <?php else : ?>
+        <h2 class="title">
+            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+        </h2>
     <?php endif; ?>
 
     <?php if ( get_post_type() == 'post' ) : ?>
