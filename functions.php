@@ -29,6 +29,7 @@ function postmodern_load_style() {
     if ( ! is_admin() ) {
         wp_register_style( 'postmodern_fonts', '//fonts.googleapis.com/css?family=Roboto:300,400,700|Roboto+Condensed:300,700' );
         wp_enqueue_style( 'postmodern_style', get_stylesheet_uri(), array( 'postmodern_fonts' ) );
+        wp_enqueue_style( 'postmodern_font_awesome', get_stylesheet_directory_uri() . '/fa/css/font-awesome.min.css' );
     }
 }
 add_action( 'wp_print_styles', 'postmodern_load_style' );
