@@ -10,8 +10,6 @@ function postmodern_setup() {
     add_theme_support( 'post-thumbnails' );
     add_image_size( 'post-image', 720, 9999 );
     add_theme_support( 'title-tag' );
-    add_theme_support( 'post-formats', array( 'aside' ) );
-
 
     register_nav_menu( 'primary-menu', __( 'Primary Menu', 'postmodern' ) );
     load_theme_textdomain( 'postmodern', get_template_directory() . '/languages' );

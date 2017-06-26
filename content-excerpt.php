@@ -6,7 +6,7 @@
 
 <article <?php post_class( 'post'); ?>>
 
-    <h1 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+    <h2 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
     <?php if ( has_post_thumbnail() ) : ?>
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="featured-image">
@@ -33,7 +33,7 @@
     <?php endif; ?>
 
     <div class="content">
-        <?php the_content(); ?>
+        <?php the_excerpt(); ?>
     </div>
 
     <?php if ( is_singular() ) { wp_link_pages(); }?>
