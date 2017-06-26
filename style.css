@@ -41,13 +41,13 @@ table { border-collapse: collapse; border-spacing: 0; empty-cells: show; font-si
 
 ol, ul { list-style: none; }
 
-blockquote:before, blockquote:after { content: ""; }
+blockquote:before, blockquote:after { content: ''; }
 
-input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration { display: none; }
+input[type='search']::-webkit-search-decoration, input[type='search']::-webkit-search-cancel-button, input[type='search']::-webkit-search-results-button, input[type='search']::-webkit-search-results-decoration { display: none; }
 
 .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); height: 1px; overflow: hidden; position: absolute !important; width: 1px; }
 
-.screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-weight: 700; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; /* Above WP toolbar. */ }
+.screen-reader-text:focus { background-color: #F1F1F1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; color: #21759B; display: block; font-size: 14px; font-weight: 700; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; /* Above WP toolbar. */ }
 
 a, a:visited { color: #3D9970; text-decoration: none; }
 
@@ -59,37 +59,37 @@ img { display: block; height: auto; max-width: 100%; }
 
 input::-webkit-input-placeholder { color: #999; }
 
+input::-moz-placeholder { color: #999; }
+
 input:-ms-input-placeholder { color: #999; }
 
-input::-moz-placeholder { color: #999; }
+blockquote p { font-style: italic; }
+
+blockquote cite:before { content: '— '; }
 
 .wrapper { margin: 0 auto; max-width: 90%; width: 720px; }
 
-header { margin: 0 auto 100px auto; width: 90%; border-bottom: 1px solid #CCC; }
+header { margin: 0 auto 100px auto; width: 90%; border-bottom: 1px solid #CCCCCC; }
 
 header h2 { font-size: 2.4rem; font-weight: 700; margin-top: 40px; margin-bottom: 8px; text-align: center; }
 
-header p { font-size: 85%; margin-top: 0px; text-align: center; }
+header p { font-size: 85%; margin-top: 0; text-align: center; }
+
+article { display: block; }
 
 .title { line-height: 1.4; text-align: center; }
 
 .featured-image { display: block; margin: 0 auto 30px auto; }
 
-.meta { color: #999; margin: 30px 0; font-size: 0.9em; font-weight: 400; }
+.meta { color: #222; margin: 30px 0; font-size: 0.9em; font-weight: 300; font-family: "Roboto Condensed", sans-serif; }
 
-article { display: block; }
+.meta a, .meta a:visited { color: #222; }
 
-.post-date { margin: 30px 0; font-size: 0.9em; font-weight: 300; font-family: "Roboto Condensed", sans-serif; }
+.meta a:hover { color: #FF4136; }
 
-.post-date a, .post-date a:visited { color: black; }
-
-.post-date a:hover { color: #FF4136; }
+span.post-date, span.post-category { margin-right: 1.5rem; }
 
 span.sep { margin: 0 15px; }
-
-.meta p:first-child + p { margin-top: 15px; }
-
-.meta a, .meta a:hover { color: #999; }
 
 .content * { max-width: 100%; }
 
@@ -101,7 +101,7 @@ em { font-style: italic; }
 
 .post hr { border: none; margin: 40px 0; text-align: center; }
 
-.post hr:before { content: "***"; }
+.post hr:before { content: '***'; }
 
 .content > ol, .content > ul { margin-bottom: 30px; }
 
@@ -123,11 +123,7 @@ em { font-style: italic; }
 
 dd + dt { margin-top: 15px; }
 
-blockquote { border-left: 1px solid #ccc; margin: 0 0 30px 0; padding: 0 0 0 30px; }
-
-blockquote p { font-style: italic; }
-
-blockquote cite:before { content: "— "; }
+blockquote { border-left: 1px solid #CCCCCC; margin: 0 0 30px 0; padding: 0 0 0 30px; }
 
 div.wp-caption { display: block; margin-bottom: 30px; }
 
@@ -146,29 +142,29 @@ div.wp-caption { display: block; margin-bottom: 30px; }
 .alignright .wp-caption-text { text-align: right; }
 
 /* Inputs ----------------------------- */
-fieldset { border: 1px solid #ddd; padding: 25px; }
+fieldset { border: 1px solid #CCCCCC; padding: 25px; }
 
 fieldset legend { font-size: 0.9em; font-style: italic; padding: 0 15px; }
 
 label { font-size: 0.9em; font-style: italic; margin-bottom: 10px; }
 
-textarea, input[type="email"], input[type="password"], input[type="tel"], input[type="text"], input[type="url"] { border: 1px solid #ddd; color: #111; display: block; font-size: 0.9em; margin: 0 0 15px 0; padding: 15px; width: 100%; }
+textarea, input[type='email'], input[type='password'], input[type='tel'], input[type='text'], input[type='url'] { border: 1px solid #CCCCCC; color: #111; display: block; font-size: 0.9em; margin: 0 0 15px 0; padding: 15px; width: 100%; }
 
 textarea { line-height: 1.5; height: 200px; }
 
-input[type="button"], input.button, input[type="submit"] { background: #111; border: none; color: #fff; display: inline-block; font-size: 14px; padding: 14px 24px; }
+input[type='button'], input.button, input[type='submit'] { background: #111; border: none; color: white; display: inline-block; font-size: 14px; padding: 14px 24px; }
 
-input[type="button"]:hover, input.button:hover, input[type="submit"]:hover { background: #333; cursor: pointer; }
+input[type='button']:hover, input.button:hover, input[type='submit']:hover { background: #333; cursor: pointer; }
 
 th, td { line-height: 1.4; margin: 0; overflow: visible; padding: 2.5%; }
 
-caption { border-bottom: 1px solid #ddd; font-size: 13px; font-weight: 700; padding-bottom: 2.5%; text-align: center; text-transform: uppercase; }
+caption { border-bottom: 1px solid #CCCCCC; font-size: 13px; font-weight: 700; padding-bottom: 2.5%; text-align: center; text-transform: uppercase; }
 
 thead { vertical-align: bottom; white-space: nowrap; }
 
-th { border-bottom: 1px solid #ddd; font-weight: 700; }
+th { border-bottom: 1px solid #CCCCCC; font-weight: 700; }
 
-tbody > tr:nth-child(even) { background-color: #f6f6f6; }
+tbody > tr:nth-child(even) { background-color: #F0F0F0; }
 
 /* -------------------------------------------------------------------------------- 6.	Comments -------------------------------------------------------------------------------- */
 .comment { margin-top: 40px; }
@@ -217,8 +213,6 @@ h3.comment-reply-title { font-size: 2.0em; margin-bottom: 6px; }
 footer { padding: 0 0 80px; text-align: center; }
 
 footer p { line-height: 1; text-align: center; }
-
-footer p + p { font-style: italic; margin-top: 15px; }
 
 @media (max-width: 620px) { body { font-size: 16px; }
   .toggle-menu { font-size: 14px; letter-spacing: 1px; text-transform: uppercase; }
