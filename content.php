@@ -8,7 +8,7 @@
 
     <?php if ( has_post_thumbnail() ) : ?>
         <figure class="full-width">
-            <img src="<?php the_post_thumbnail_url( 'post-image' ); ?>"  title="<?php the_title_attribute(); ?>"  class="featured-image"/>
+            <img src="<?php the_post_thumbnail_url( 'large' ); ?>"  title="<?php the_title_attribute(); ?>"  class="featured-image"/>
         </figure>
     <?php endif; ?>
 
