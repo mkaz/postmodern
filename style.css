@@ -243,3 +243,36 @@ footer p { line-height: 1; text-align: center; }
   body { font-size: 16px; }
   figure.full-width { width: 100vw; position: relative; left: 4%; right: 15%; margin-left: -10vw; margin-right: -15vw; margin-bottom: 32px; }
   .post:before, .comments:before, .comment-respond:before, .comments .comment-respond:after, .pagination:before, footer:before { margin: 30px auto; } }
+
+/* gutenberg styles */
+.wp-block-gallery { display: flex; flex-wrap: wrap; }
+
+.wp-block-gallery:not(.components-placeholder) { margin-right: -16px; margin-bottom: -16px; }
+
+.wp-block-gallery .blocks-gallery-image { flex-grow: 1; margin: 0 16px 16px 0; }
+
+.wp-block-gallery .blocks-gallery-image img { max-width: 100%; }
+
+.wp-block-gallery.columns-1 figure { width: calc(100% / 1 - 2 * 8px); }
+
+.wp-block-gallery.columns-2 figure { width: calc(100% / 2 - 3 * 8px); }
+
+.wp-block-gallery.columns-3 figure { width: calc(100% / 3 - 4 * 8px); }
+
+.wp-block-gallery.columns-4 figure { width: calc(100% / 4 - 5 * 8px); }
+
+.wp-block-gallery.columns-5 figure { width: calc(100% / 5 - 6 * 8px); }
+
+.wp-block-gallery.columns-6 figure { width: calc(100% / 6 - 7 * 8px); }
+
+.wp-block-gallery.columns-7 figure { width: calc(100% / 7 - 8 * 8px); }
+
+.wp-block-gallery.columns-8 figure { width: calc(100% / 8 - 9 * 8px); }
+
+.wp-block-gallery.is-placeholder { margin: -15px; padding: 6em 0; border: 2px solid #CCCCCC; text-align: center; }
+
+.blocks-gallery__placeholder-label { display: flex; align-items: center; justify-content: center; font-weight: bold; }
+
+.blocks-gallery__placeholder-label .dashicon { margin-right: 1ch; }
+
+.blocks-gallery__placeholder-instructions { margin: 1.8em 0; }
