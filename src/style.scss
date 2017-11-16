@@ -1,0 +1,569 @@
+@charset "UTF-8";
+/*---------------------------------------------------------------------------------
+
+    Theme Name: Postmodern
+    Text Domain: postmodern
+    Version: 0.2.0
+    Description: Postmodern is a WordPress theme
+    Tags: blog, one-column, custom-menu, featured-images, post-formats, threaded-comments, translation-ready
+    Author: Marcus Kazmierczak
+    Author URI: https://mkaz.com/
+    License: GNU General Public License version 2.0
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+    Original theme base from Davis by Anders Noren
+    All files, unless otherwise stated, are released under the GNU General Public License
+    version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+----------------------------------------------------------------------------------- */
+
+$default-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$article-font: "Noto Serif", serif;
+
+
+$bg-color: white;
+$fg-color: #444444;
+
+$header-bg: #D9D9D9;
+$header-height: 56px;
+
+$link-color: #2180D1;
+$link-hover: #EC2D73;
+
+$full-width: 1440px;
+$big-width: 960px;
+$content-width: 720px;
+
+/* ----------------------------------------------------------------------------------- */
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+	font-size: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+
+    background: $bg-color;
+    color: $fg-color;
+    font-size: 1.2rem;
+    font-family: $default-font;
+	line-height: 1.8;
+}
+
+@media only screen and ( max-width: 640px ) {
+	body {
+		font-size: 1.0rem;
+		line-height: 1.6;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 2.0rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.6rem; }
+h5 { font-size: 1.4rem; }
+h6 { font-size: 1.2rem; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+  color: #333;
+  text-decoration: none;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  color: $link-hover;
+  text-decoration: none;
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+ol, ul { list-style: none; }
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+    display: none;
+}
+
+.screen-reader-text {
+    clip: rect( 1px, 1px, 1px, 1px );
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+.screen-reader-text:focus {
+    background-color: #F1F1F1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759B;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+
+a, a:visited {
+    color: $link-color;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $link-hover;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+figure {
+	margin: 3.0rem auto 4.0rem auto;
+	padding: 0;
+}
+
+figure:first-of-type {
+	margin-top: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+input::-webkit-input-placeholder { color: #999; }
+input::-moz-placeholder { color: #999; }
+input:-ms-input-placeholder { color: #999; }
+
+
+blockquote:before,
+blockquote:after { content: ''; }
+
+blockquote p {
+	color: #999;
+	font-family: 700;
+}
+
+blockquote cite:before { content: '— '; }
+
+blockquote {
+	width: 50%;
+    border-left: 4px solid orange;
+    margin: 3.0rem auto;
+    padding-left: 2.0rem;
+}
+
+
+
+header.global {
+	max-width: $content-width;
+	margin: 0 auto 32px auto;
+	padding: 8px;
+	display: flex;
+	justify-content: space-between;
+
+	h2 {
+		display: inline-block;
+		margin: 0;
+		padding: 32px;
+		background-color: #EEE;
+		font-size: 2.2rem;
+		font-weight: 700;
+		line-height: 1.0;
+		color: #888;
+		text-transform: uppercase;
+	}
+
+	h2 a, h2 a:visited { color: #888; }
+	h2 a:hover { color: $link-hover; }
+
+	nav {
+		display: inline-block;
+		font-size: 0.9rem;
+	}
+
+}
+
+body.home article {
+  padding-bottom: 48px;
+  border-bottom: 2px dashed #CCCCCC;
+  margin-bottom: 48px;
+}
+
+article {
+    display: block;
+    margin-bottom: 64px;
+
+	.title {
+	    margin: 16px auto 8px auto;
+		padding: 0 1.0rem;
+	    line-height: 1.0;   /* keep multiline titles tight */
+		max-width: $content-width;
+	}
+
+	.meta {
+	    color: #333;
+	    margin: 8px auto 30px auto;
+		padding: 0 1.0rem;
+	    font-size: 0.9rem;
+		font-weight: 300;
+		font-family: $default-font;
+		max-width: $content-width;
+
+		a, a:visited {
+			color: #333;
+		}
+
+		a:hover {
+			color: $link-hover;
+		}
+	}
+
+	footer {
+		max-width: $content-width;
+		margin: 32px auto;
+		padding: 0 1.0rem;
+		font-size: 1.0rem;
+
+		.post-tags a {
+			margin: 0 6px;
+		}
+	}
+}
+
+body.single article .meta {
+  margin-bottom: 3.0rem;
+}
+
+span.post-date,
+span.post-category {
+    margin-right: 1.5rem;
+}
+
+span.sep { margin: 0 15px; }
+
+.sticky {}
+
+
+em {
+    font-style: italic;
+}
+
+/* Center everything, except a few things */
+section.content > *:not( img ):not( video ):not( figure ) {
+	max-width: $content-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content * { max-width: 100%; }
+
+.content > ol,
+.content > ul {
+    margin-bottom: 30px;
+}
+
+.post {
+	margin: 0 auto;
+	font-family: $article-font;
+
+	p {
+    	line-height: 1.55;
+		margin: 3.0rem 0 3.0rem 0;
+		padding: 0 1.0rem;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	hr {
+    	border: none;
+		margin: 40px 0;
+		text-align: center;
+	}
+
+	hr:before { content: '***'; }
+
+	ul { list-style: disc; }
+	ul ul { list-style: square; }
+	ul ul ul { list-style: circle; }
+
+	ol { list-style: decimal; }
+	ol ol { list-style: lower-alpha; }
+	ol ol ol { list-style: lower-roman; }
+
+	li {
+    	line-height: 1.5;
+		margin-top: 0.5em;
+	}
+
+	.gallery-caption,
+	.wp-caption-text {
+		font-family: $default-font;
+	    font-size: 0.8rem;
+	    font-weight: 300;;
+	    margin-top: 4px;
+		color: #666;
+	}
+
+	img.size-full {
+		max-width: $big-width;
+		width: 100%;
+		margin: 3.0rem auto;
+	}
+}
+
+dd + dt { margin-top: 15px; }
+
+div.wp-caption {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.alignleft,
+.alignright {
+    margin-bottom: 20px;
+    max-width: 50%;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 20px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 30px;
+}
+
+.aligncenter,
+.alignnone { margin: 0 auto; }
+
+/* Media ----------------------------- */
+
+.full-width img {
+	display: block;
+	max-width: $full-width;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.aligncenter .wp-caption-text { text-align: center; }
+.alignright .wp-caption-text { text-align: right; }
+
+/* Inputs ----------------------------- */
+
+fieldset {
+    border: 1px solid #CCCCCC;
+    padding: 25px;
+}
+
+fieldset legend {
+    font-size: 0.9em;
+    font-style: italic;
+    padding: 0 15px;
+}
+
+label {
+    font-size: 0.9em;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+textarea,
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+input[type='text'],
+input[type='url'] {
+    border: 1px solid #CCCCCC;
+    color: #111;
+    display: block;
+    font-size: 0.9em;
+    margin: 0 0 15px 0;
+    padding: 15px;
+    width: 100%;
+}
+
+textarea {
+    line-height: 1.5;
+    height: 200px;
+}
+
+input[type='button'],
+input.button,
+input[type='submit'] {
+    background: #111;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 14px;
+    padding: 14px 24px;
+}
+
+input[type='button']:hover,
+input.button:hover,
+input[type='submit']:hover {
+    background: #333;
+    cursor: pointer;
+}
+
+th,
+td {
+    line-height: 1.4;
+    margin: 0;
+    overflow: visible;
+    padding: 2.5%;
+}
+
+caption {
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 13px;
+    font-weight: 700;
+    padding-bottom: 2.5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+thead {
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+th {
+    border-bottom: 1px solid #CCCCCC;
+    font-weight: 700;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: #F0F0F0;
+}
+
+
+
+.comment { margin-top: 40px; }
+
+.comment a { text-decoration: underline; }
+
+.commentlist > .comment:first-child { margin-top: 0; }
+
+.comment .comment { margin: 40px 0 0 30px; }
+
+.comment-author a,
+.comment-meta a,
+.comment .reply a {
+    text-decoration: none;
+}
+
+.comment-author {
+    padding-left: 50px;
+    position: relative;
+}
+
+.bypostauthor .comment-author cite { font-weight: 700; }
+
+.comment-author .says { display: none; }
+
+.comment-author .avatar {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 40px;
+}
+
+.comment-awaiting-moderation {
+    font-size: 14px;
+    font-style: italic;
+    padding-left: 50px;
+}
+
+.comment-meta {
+    font-size: 14px;
+    margin: 2px 0 20px 0;
+    padding-left: 50px;
+}
+
+.comment-meta a,
+.comment-meta a:hover { color: #999; }
+
+.comment .reply {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.comment .reply a { color: #999; }
+.comment .reply a:hover { text-decoration: underline; }
+
+.comment-respond {
+  margin-top: 8.0rem;
+}
+
+.comment-respond p + p { margin-top: 20px; }
+
+/* resize to h4 size, markup from wordpress core */
+h3.comment-reply-title {
+    font-size: 2.0em;
+    margin-bottom: 6px;
+}
+
+.logged-in-as {
+    margin: -10px 0 30px;
+}
+
+.comment-respond label { display: block; }
+
+.pagination { text-align: center; }
+.pagination * + * { margin-left: 30px; }
+
+footer.global {
+    padding: 0 0 80px;
+    text-align: center;
+
+	p {
+    	line-height: 1;
+		text-align: center;
+	}
+}
+

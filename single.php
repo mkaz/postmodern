@@ -8,33 +8,28 @@
     </head>
 
     <body <?php body_class(); ?>>
-        <div class="wrapper">
 
-            <header>
-                <h2><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></h2>
-                <p><?php bloginfo( 'description' ); ?></p>
-            </header>
+        <?php get_template_part( 'header' ); ?>
 
-            <?php if ( have_posts() ) :
-                while ( have_posts() ) : the_post();
-                    get_template_part( 'content' );
-                endwhile;
+        <?php if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
+                get_template_part( 'content' );
+            endwhile;
 
-            else : ?>
+        else : ?>
 
-                <div class="post">
-                    <p><?php _e( 'Sorry, the page you requested cannot be found.', 'postmodern' ); ?></p>
-                </div>
+            <div class="post">
+                <p><?php _e( 'Sorry, the page you requested cannot be found.', 'postmodern' ); ?></p>
+            </div>
 
-            <?php endif; ?>
+        <?php endif; ?>
 
 
-            <footer>
-                <p>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></p>
-                <p>Theme: <a href="https://github.com/mkaz/postmodern/">Postmodern</a> by <a href="https://mkaz.com/" rel="designer">mkaz</a></p>
-            </footer>
+        <footer>
+            <p>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></p>
+            <p>Theme: <a href="https://github.com/mkaz/postmodern/">Postmodern</a> by <a href="https://mkaz.com/" rel="designer">mkaz</a></p>
+        </footer>
 
-        </div>
 
         <?php wp_footer(); ?>
 

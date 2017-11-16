@@ -6,5 +6,11 @@
   "license": "GPL",
   "devDependencies": {
     "stylelint-no-unsupported-browser-features": "^1.0.0"
+  },
+  "scripts": {
+	  "watch": "node-sass -w -o ./ src",
+	  "scss": "node-sass --output-style compact -o ./ src",
+	  "autoprefixer": "postcss -u autoprefixer -r ./style.css",
+	  "build:css": "yarn scss && yarn autoprefixer"
   }
 }

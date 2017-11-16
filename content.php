@@ -8,14 +8,18 @@
 
     <?php if ( has_post_thumbnail() ) : ?>
         <figure class="full-width">
-            <img src="<?php the_post_thumbnail_url( 'large' ); ?>"  title="<?php the_title_attribute(); ?>"  class="featured-image"/>
+            <img src="<?php the_post_thumbnail_url( 'full' ); ?>"  title="<?php the_title_attribute(); ?>"  class="featured-image"/>
         </figure>
     <?php endif; ?>
 
-    <h1 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+    <header>
+        <h1 class="title">
+            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+        </h1>
+    </header>
 
     <?php if ( get_post_type() == 'post' ) : ?>
-    <div class="meta">
+    <section class="meta">
         <span class="post-date">
             <span class="fa fa-calendar"></span>
             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
@@ -26,15 +30,19 @@
             <span class="fa fa-folder"></span>
             <?php the_category( ', ' ); ?>
         </span>
-        <span class="post-tags">
-            <?php the_tags( ' #', ' #', ' ' ); ?>
-        </span>
-    </div>
+    </section>
     <?php endif; ?>
 
-    <div class="content">
+    <section class="content">
         <?php the_content(); ?>
-    </div>
+    </section>
+
+    <footer>
+        <div class="post-tags">
+            <span class="fa fa-tag"></span>
+            <?php postmodern_get_tags(); ?>
+        </div>
+    </footer>
 
     <?php if ( is_singular() ) { wp_link_pages(); }?>
 

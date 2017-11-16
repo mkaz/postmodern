@@ -9,39 +9,32 @@
 
     <body <?php body_class(); ?>>
 
-        <div class="wrapper">
+      <?php get_template_part( 'header' ); ?>
 
-            <header>
-                <h2><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></h2>
-                <p><?php bloginfo( 'description' ); ?></p>
-            </header>
+        <?php if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
+                get_template_part( 'content', 'excerpt' );
+            endwhile;
 
-            <?php if ( have_posts() ) :
-                while ( have_posts() ) : the_post();
-                    get_template_part( 'content', 'excerpt' );
-                endwhile;
+        else : ?>
 
-            else : ?>
+            <div class="post">
+                <p><?php _e( 'Sorry, the page you requested cannot be found.', 'postmodern' ); ?></p>
+            </div>
 
-                <div class="post">
-                    <p><?php _e( 'Sorry, the page you requested cannot be found.', 'postmodern' ); ?></p>
-                </div>
+        <?php endif; ?>
 
-            <?php endif; ?>
+        <?php if ( ( ! is_singular() ) && ( $wp_query->post_count >= get_option( 'posts_per_page' ) ) ) : ?>
+            <div class="pagination">
+                <?php previous_posts_link( '&larr; ' . __( 'Newer posts', 'postmodern' ) ); ?>
+                <?php next_posts_link( __( 'Older posts', 'postmodern') . ' &rarr;' ); ?>
+            </div>
+        <?php endif; ?>
 
-            <?php if ( ( ! is_singular() ) && ( $wp_query->post_count >= get_option( 'posts_per_page' ) ) ) : ?>
-                <div class="pagination">
-                    <?php previous_posts_link( '&larr; ' . __( 'Newer posts', 'postmodern' ) ); ?>
-                    <?php next_posts_link( __( 'Older posts', 'postmodern') . ' &rarr;' ); ?>
-                </div>
-            <?php endif; ?>
-
-            <footer>
-                <p>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></p>
-                <p>Theme: <a href="https://github.com/mkaz/postmodern/">Postmodern</a> by <a href="https://mkaz.com/" rel="designer">mkaz</a></p>
-            </footer>
-
-        </div>
+        <footer>
+            <p>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></p>
+            <p>Theme: <a href="https://github.com/mkaz/postmodern/">Postmodern</a> by <a href="https://mkaz.com/" rel="designer">mkaz</a></p>
+        </footer>
 
         <?php wp_footer(); ?>
 
