@@ -4,46 +4,42 @@
  */
 ?>
 
-<article <?php post_class( 'post'); ?>>
+
+<article <?php post_class( 'post' ); ?>>
 
     <?php if ( has_post_thumbnail() ) : ?>
-        <div class="excerpt-featured"
-            style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) ), url(<?php echo the_post_thumbnail_url(); ?>)"
-        >
-            <h2 class="featured-title">
-                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-            </h2>
+        <div class="featured-image">
+    		<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
         </div>
-    <?php else : ?>
+    <?php endif; ?>
+
+    <section class="post">
+
         <h2 class="title">
             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
         </h2>
-    <?php endif; ?>
 
-    <?php if ( get_post_type() == 'post' ) : ?>
-    <div class="meta">
-        <span class="post-date">
-            <span class="fa fa-calendar"></span>
-            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                <?php the_time( get_option( 'date_format' ) ); ?>
-            </a>
-        </span>
-        <span class="post-category">
-            <span class="fa fa-folder"></span>
-            <?php the_category( ', ' ); ?>
-        </span>
-        <span class="post-tags">
-            <?php the_tags( ' #', ' #', ' ' ); ?>
-        </span>
-    </div>
-    <?php endif; ?>
+        <?php if ( get_post_type() == 'post' ) : ?>
+        <section class="meta">
+            <span class="post-date">
+                <span class="fa fa-calendar"></span>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                    <?php the_time( get_option( 'date_format' ) ); ?>
+                </a>
+            </span>
+            <span class="post-category">
+                <span class="fa fa-folder"></span>
+                <?php the_category( ', ' ); ?>
+            </span>
+            <span class="post-tags">
+                <?php the_tags( ' #', ' #', ' ' ); ?>
+            </span>
+        </section>
+        <?php endif; ?>
 
-    <div class="content">
-        <?php the_excerpt(); ?>
-    </div>
-
-    <?php if ( is_singular() ) { wp_link_pages(); }?>
-
-    <?php if ( is_singular() ) { comments_template(); } ?>
+        <section class="content">
+            <?php the_excerpt(); ?>
+        </section>
+    </section>
 
 </article>

@@ -223,10 +223,36 @@ header.global {
 }
 
 body.home article {
-  padding-bottom: 48px;
-  border-bottom: 2px dashed #CCCCCC;
-  margin-bottom: 48px;
+	max-width: $content-width;
+	margin: 0 auto 3.0rem auto;
+	padding: 0 0 3.0rem 1.0rem;
+	display: flex;
+	flex-wrap: wrap;
+
+	.featured-image {
+		margin: 0 auto;
+		padding-right: 16px;
+		max-width: 300px;
+		width: 100%;
+	}
+
+	.meta {
+		margin-bottom: 8px;
+	}
+
+	section.post {
+		max-width: 360px;
+		font-size: 1.0rem;
+	}
+
+	h2.title { margin-top: 0; }
+
+	section.content p {
+		margin: 1.0rem 0;
+	}
 }
+
+
 
 article {
     display: block;
