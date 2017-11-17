@@ -21,25 +21,21 @@
 
         <?php if ( get_post_type() == 'post' ) : ?>
         <section class="meta">
-            <span class="post-date">
+            <div class="post-date">
                 <span class="fa fa-calendar"></span>
                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                     <?php the_time( get_option( 'date_format' ) ); ?>
                 </a>
-            </span>
-            <span class="post-category">
-                <span class="fa fa-folder"></span>
-                <?php the_category( ', ' ); ?>
-            </span>
-            <span class="post-tags">
-                <?php the_tags( ' #', ' #', ' ' ); ?>
-            </span>
+            </div>
         </section>
         <?php endif; ?>
 
         <section class="content">
             <?php the_excerpt(); ?>
         </section>
+
+        <?php postmodern_get_tags(); ?>
+
     </section>
 
 </article>

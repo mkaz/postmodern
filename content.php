@@ -38,10 +38,7 @@
     </section>
 
     <footer>
-        <div class="post-tags">
-            <span class="fa fa-tag"></span>
-            <?php postmodern_get_tags(); ?>
-        </div>
+        <?php postmodern_get_tags(); ?>
     </footer>
 
     <?php if ( is_singular() ) { wp_link_pages(); }?>
