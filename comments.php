@@ -4,7 +4,10 @@
 
         <h4 class="comment-reply-title"><?php _e( 'Comments', 'postmodern' ) ?></h4>
 
-        <?php wp_list_comments(array( 'style' => 'div')); ?>
+        <?php wp_list_comments(array(
+            'style' => 'div',
+            'avatar_size' => '144',
+        ) ); ?>
 
         <?php if ( paginate_comments_links( 'echo=0' ) ) : ?>
             <div class="pagination"><?php paginate_comments_links(); ?></div>

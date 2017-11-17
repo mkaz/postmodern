@@ -221,7 +221,7 @@ article {
       color: #EC2D73; }
   article footer {
     max-width: 720px;
-    margin: 32px auto;
+    margin: 4.0rem auto;
     padding: 0 1.0rem;
     font-size: 1.0rem; }
     article footer .post-tags a {
@@ -282,7 +282,8 @@ section.content > *:not(img):not(video):not(figure) {
     list-style: lower-roman; }
   .post li {
     line-height: 1.5;
-    margin-top: 0.5em; }
+    margin-top: 0.5rem;
+    margin-bottom: 1.8rem; }
   .post .gallery-caption,
   .post .wp-caption-text {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -408,8 +409,23 @@ th {
 tbody > tr:nth-child(even) {
   background-color: #F0F0F0; }
 
+.comments,
+.comment-respond {
+  max-width: 720px;
+  margin: 4.0rem auto;
+  padding: 0 1.0rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+
 .comment {
-  margin-top: 40px; }
+  margin-top: 4.0rem;
+  font-size: 1.0rem;
+  color: #777; }
+
+.comment p {
+  margin-top: 1.0rem;
+  margin-left: 80px;
+  margin-bottom: 0.5rem;
+  padding: 0; }
 
 .comment a {
   text-decoration: underline; }
@@ -418,7 +434,7 @@ tbody > tr:nth-child(even) {
   margin-top: 0; }
 
 .comment .comment {
-  margin: 40px 0 0 30px; }
+  margin: 40px 0 0 80px; }
 
 .comment-author a,
 .comment-meta a,
@@ -426,7 +442,7 @@ tbody > tr:nth-child(even) {
   text-decoration: none; }
 
 .comment-author {
-  padding-left: 50px;
+  padding-left: 80px;
   position: relative; }
 
 .bypostauthor .comment-author cite {
@@ -439,7 +455,7 @@ tbody > tr:nth-child(even) {
   position: absolute;
   left: 0;
   top: 1px;
-  width: 40px; }
+  width: 72px; }
 
 .comment-awaiting-moderation {
   font-size: 14px;
@@ -448,8 +464,8 @@ tbody > tr:nth-child(even) {
 
 .comment-meta {
   font-size: 14px;
-  margin: 2px 0 20px 0;
-  padding-left: 50px; }
+  margin: -4px 0 20px 0;
+  padding-left: 80px; }
 
 .comment-meta a,
 .comment-meta a:hover {
@@ -458,24 +474,25 @@ tbody > tr:nth-child(even) {
 .comment .reply {
   font-size: 14px;
   font-style: italic;
-  margin-top: 15px;
-  text-align: right; }
+  margin-left: 80px; }
 
 .comment .reply a {
   color: #999; }
 
 .comment .reply a:hover {
-  text-decoration: underline; }
+  color: #EC2D73; }
 
-.comment-respond {
-  margin-top: 8.0rem; }
+.comment-respond p {
+  margin: 1.0rem 0;
+  padding: 0; }
 
-.comment-respond p + p {
-  margin-top: 20px; }
+p.logged-in-as {
+  margin: 0;
+  font-size: 1.0rem; }
 
 /* resize to h4 size, markup from wordpress core */
 h3.comment-reply-title {
-  font-size: 2.0em;
+  font-size: 1.6rem;
   margin-bottom: 6px; }
 
 .logged-in-as {
@@ -491,8 +508,12 @@ h3.comment-reply-title {
   margin-left: 30px; }
 
 footer.global {
-  padding: 0 0 80px;
-  text-align: center; }
+  width: 100%;
+  background-color: #CCCCCC;
+  margin: 4.0rem auto 0 auto;
+  padding: 0.75rem 1.0rem;
+  text-align: center;
+  font-size: 1.0rem; }
   footer.global p {
     line-height: 1;
     text-align: center; }
