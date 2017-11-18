@@ -12,6 +12,7 @@ function postmodern_setup() {
     add_theme_support( 'title-tag' );
 
     register_nav_menu( 'primary-menu', __( 'Primary Menu', 'postmodern' ) );
+    register_nav_menu( 'extended-menu', __( 'Extended Menu', 'postmodern' ) );
     load_theme_textdomain( 'postmodern', get_template_directory() . '/languages' );
 
     $locale_file = get_template_directory() . "/languages/" . get_locale();
@@ -28,6 +29,7 @@ function postmodern_load_style() {
         wp_register_style( 'postmodern_fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700' );
         wp_enqueue_style( 'postmodern_style', get_stylesheet_uri(), array( 'postmodern_fonts' ) );
         wp_enqueue_style( 'postmodern_font_awesome', get_stylesheet_directory_uri() . '/fa/css/font-awesome.min.css' );
+    	wp_enqueue_script( 'postmodern-script', get_template_directory_uri() . '/script.js', array(), '20171118', true );
     }
 }
 add_action( 'wp_print_styles', 'postmodern_load_style' );

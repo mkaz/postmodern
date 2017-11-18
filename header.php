@@ -8,9 +8,22 @@
     </div>
 
     <nav>
-        <ul>
-            <li> About </li>
-            <li> Sections </li>
-        </ul>
+        <?php
+            wp_nav_menu( array(
+                'theme_location' => 'primary',
+                'menu_id'        => 'primary-menu',
+                'container'      => ''
+        ) ); ?>
+        <div id="menu-toggle">
+            <span class="fa fa-bars"></span>
+        </div>
     </nav>
 </header>
+<nav id="extended" class="off">
+<?php
+    wp_nav_menu( array(
+        'theme_location' => 'extended',
+        'menu_id' => 'extended-menu',
+        'link_before' => '<span class="fa fa-angle-double-right"></span> ',
+) ); ?>
+</nav>
