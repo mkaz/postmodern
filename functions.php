@@ -29,7 +29,6 @@ function postmodern_load_style() {
         wp_register_style( 'postmodern_fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700' );
         wp_enqueue_style( 'postmodern_style', get_stylesheet_uri(), array( 'postmodern_fonts' ) );
         wp_enqueue_style( 'postmodern_font_awesome', get_stylesheet_directory_uri() . '/fa/css/font-awesome.min.css' );
-    	wp_enqueue_script( 'postmodern-script', get_template_directory_uri() . '/script.js', array(), '20171118', true );
     }
 }
 add_action( 'wp_print_styles', 'postmodern_load_style' );

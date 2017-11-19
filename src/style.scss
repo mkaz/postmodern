@@ -184,16 +184,31 @@ header.global {
 	display: flex;
 	justify-content: space-between;
 
-	.logo {
-		display: inline-block;
-		width: 128px;
-		margin-bottom: 16px;
-	}
 
-	.camera-logo {
-		display: inline-block;
-		width: 64px;
-		margin-right: 12px;
+	div.site-branding {
+		display: flex;
+		width: 100%;
+		min-width: 300px;
+		margin-right: 32px;
+
+		img.avatar {
+			display: block;
+			margin-right: 32px;
+			width: 128px;
+			border-radius: 64px;
+		}
+
+		.logo {
+			display: block;
+			width: 128px;
+		}
+
+		.camera-logo {
+			display: inline-block;
+			width: 64px;
+			margin-right: 12px;
+		}
+
 	}
 
 	nav {
@@ -201,60 +216,18 @@ header.global {
 		display: flex;
 		margin: 8px;
 
+
 		ul {
-			display: inline-block;
-			margin: 0;
+			margin: 0 0 0 16px;
 			padding: 0;
+			min-width: 160px;
 		}
 		li {
-			display: inline-block;
+			display: block;
 			margin-right: 1.55rem;
 		}
 	}
 }
-
-#menu-toggle { cursor: pointer; }
-nav#extended {
-	margin: -3.0rem auto 3.0rem auto;
-	padding: 16px;
-	border-top: 1px solid $accent;
-	border-left: 1px solid $accent;
-	border-bottom: 1px solid $accent;
-	background-color: #F0F0F0;
-	font-size: 0.9rem;
-	position: absolute;
-	top: 160px;
-	height: 320px;
-	max-width: 320px;
-    box-shadow: -2px 2px 4px rgba( 0, 0, 0, 0.2 );
-
-	ul {
-		margin: 0;
-		padding: 0 2.0rem 0 1.0rem;
-	}
-}
-
-/* add extra spacing around list items to make
-easier targets on mobile */
-@media only screen and ( max-width: 480px ) {
-	nav li {
-		margin-bottom: 1.0rem;
-	}
-}
-
-nav.on {
-	visibility: visible;
-	right: 0px;
-	transition: all 0.5s ease;
-}
-
-nav.off {
-	visibility: hidden;
-	right: -480px;
-	transition: all 0.3s ease;
-}
-
-
 
 body.home article {
 	max-width: $content-width;

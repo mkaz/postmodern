@@ -160,61 +160,34 @@ header.global {
   padding: 8px;
   display: flex;
   justify-content: space-between; }
-  header.global .logo {
-    display: inline-block;
-    width: 128px;
-    margin-bottom: 16px; }
-  header.global .camera-logo {
-    display: inline-block;
-    width: 64px;
-    margin-right: 12px; }
+  header.global div.site-branding {
+    display: flex;
+    width: 100%;
+    min-width: 300px;
+    margin-right: 32px; }
+    header.global div.site-branding img.avatar {
+      display: block;
+      margin-right: 32px;
+      width: 128px;
+      border-radius: 64px; }
+    header.global div.site-branding .logo {
+      display: block;
+      width: 128px; }
+    header.global div.site-branding .camera-logo {
+      display: inline-block;
+      width: 64px;
+      margin-right: 12px; }
   header.global nav {
     font-size: 0.9rem;
     display: flex;
     margin: 8px; }
     header.global nav ul {
-      display: inline-block;
-      margin: 0;
-      padding: 0; }
+      margin: 0 0 0 16px;
+      padding: 0;
+      min-width: 160px; }
     header.global nav li {
-      display: inline-block;
+      display: block;
       margin-right: 1.55rem; }
-
-#menu-toggle {
-  cursor: pointer; }
-
-nav#extended {
-  margin: -3.0rem auto 3.0rem auto;
-  padding: 16px;
-  border-top: 1px solid #EC2D73;
-  border-left: 1px solid #EC2D73;
-  border-bottom: 1px solid #EC2D73;
-  background-color: #F0F0F0;
-  font-size: 0.9rem;
-  position: absolute;
-  top: 160px;
-  height: 320px;
-  max-width: 320px;
-  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.2); }
-  nav#extended ul {
-    margin: 0;
-    padding: 0 2.0rem 0 1.0rem; }
-
-/* add extra spacing around list items to make
-easier targets on mobile */
-@media only screen and (max-width: 480px) {
-  nav li {
-    margin-bottom: 1.0rem; } }
-
-nav.on {
-  visibility: visible;
-  right: 0px;
-  transition: all 0.5s ease; }
-
-nav.off {
-  visibility: hidden;
-  right: -480px;
-  transition: all 0.3s ease; }
 
 body.home article {
   max-width: 720px;
