@@ -9,7 +9,7 @@
         </a>
         <div class="title">
             <img src="/img/mkaz.svg" class="logo" alt="mkaz.com"/>
-            <div><?php echo get_bloginfo( 'description' ); ?></div>
+            <div class="site-description"><?php echo get_bloginfo( 'description' ); ?></div>
         </div>
     </div>
 

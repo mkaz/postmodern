@@ -60,8 +60,6 @@ body {
     font-size: 1.2rem;
     font-family: $default-font;
 	line-height: 1.8;
-
-	overflow-x: hidden;
 }
 
 @media only screen and ( max-width: 640px ) {
@@ -180,7 +178,7 @@ header.global {
 	max-width: $content-width;
 	margin: 0 auto 3.0rem auto;
 	border-bottom: 1px solid $accent;
-	padding: 8px;
+	padding: 16px 8px 8px 8px;
 	display: flex;
 	justify-content: space-between;
 
@@ -209,6 +207,10 @@ header.global {
 			margin-right: 12px;
 		}
 
+		.site-description {
+			line-height: 1.4rem;
+			margin-top: 12px;
+		}
 	}
 
 	nav {
@@ -227,21 +229,29 @@ header.global {
 			margin-right: 1.55rem;
 		}
 	}
+
+	@media only screen and ( max-width: 480px ) {
+		nav {
+			display: none;
+		}
+	}
 }
 
 body.home article {
 	max-width: $content-width;
-	margin: 0 auto 3.5rem auto;
+	margin: 0 auto 2.0rem auto;
 	border-bottom: 1px solid #CCC;
 	padding: 0 0 2.0rem 1.0rem;
 	display: flex;
 	flex-wrap: wrap;
 
 	.featured-image {
-		margin: 0 0 16px 0;
-		padding-right: 24px;
+		margin: 4px 0 0 0;
+		padding-right: 1.5rem;
 		max-width: 300px;
+		max-height: 240px;
 		width: 100%;
+		overflow-y: hidden;
 	}
 
 	.meta {
