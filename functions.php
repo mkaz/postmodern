@@ -34,6 +34,13 @@ function postmodern_load_style() {
 add_action( 'wp_print_styles', 'postmodern_load_style' );
 
 
+function postmodern_excerpt_length( $length ) {
+	return 27;
+}
+add_filter( 'excerpt_length', 'postmodern_excerpt_length', 999 );
+
+
+
 // Remove Paragraph Tags from Images, wrap instead with <div class="figure"></div>
 function img_unautop($pee) {
     $pee = preg_replace('/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '<figure>$1</figure>', $pee);
