@@ -190,6 +190,9 @@ header.global {
     header.global nav li {
       display: block;
       margin-right: 1.55rem; }
+  @media only screen and (max-width: 780px) {
+    header.global div#extended-menu {
+      display: none; } }
   @media only screen and (max-width: 480px) {
     header.global nav {
       display: none; } }
@@ -206,7 +209,6 @@ body.home article {
     padding-right: 1.5rem;
     max-width: 300px;
     max-height: 240px;
-    width: 100%;
     overflow-y: hidden; }
   body.home article .meta {
     margin: 0 0 8px 0;
@@ -227,6 +229,10 @@ body.home article {
     margin: 1.0rem 0;
     padding: 0;
     color: #777; }
+  @media only screen and (max-width: 708px) {
+    body.home article .featured-image {
+      margin: 4px auto 16px auto;
+      max-width: 390px; } }
 
 article {
   display: block;

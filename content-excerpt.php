@@ -9,7 +9,7 @@
 
     <?php if ( has_post_thumbnail() ) : ?>
         <div class="featured-image">
-    		<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+    		<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
         </div>
     <?php endif; ?>
 

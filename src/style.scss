@@ -230,6 +230,12 @@ header.global {
 		}
 	}
 
+	@media only screen and ( max-width: 780px ) {
+		div#extended-menu {
+			display: none;
+		}
+	}
+
 	@media only screen and ( max-width: 480px ) {
 		nav {
 			display: none;
@@ -250,7 +256,6 @@ body.home article {
 		padding-right: 1.5rem;
 		max-width: 300px;
 		max-height: 240px;
-		width: 100%;
 		overflow-y: hidden;
 	}
 
@@ -282,6 +287,14 @@ body.home article {
 		padding: 0;
 		color: #777;
 	}
+
+	@media only screen and ( max-width: 708px ) {
+		.featured-image {
+			margin: 4px auto 16px auto;
+			max-width: 390px;
+		}
+	}
+
 }
 
 
