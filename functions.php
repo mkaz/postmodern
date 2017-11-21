@@ -1,7 +1,6 @@
 <?php
-
 /**
- * @package postmodern
+ * @package Postmodern
  */
 
 function postmodern_setup() {
@@ -13,7 +12,6 @@ function postmodern_setup() {
 add_action( 'after_setup_theme', 'postmodern_setup' );
 
 
-
 function postmodern_load_style() {
     if ( ! is_admin() ) {
         wp_register_style( 'postmodern_fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700' );
@@ -22,6 +20,14 @@ function postmodern_load_style() {
     }
 }
 add_action( 'wp_print_styles', 'postmodern_load_style' );
+
+
+function postmodern_portfolio_enqueue() {
+	if ( is_page ('portfolio-page') ) {
+		wp_enqueue_script( 'postmodern-portfolio', get_template_directory_uri() . '/portfolio.js', array( 'jquery', 'masonry' ), '20150624', true );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'postmodern_portfolio_enqueue' );
 
 
 function postmodern_excerpt_length( $length ) {
@@ -80,5 +86,44 @@ function img_unautop($pee) {
 add_filter( 'the_content', 'img_unautop', 30 );
 
 
-require get_template_directory() . '/inc/template.php';
+function postmodern_get_tags() {
+    global $post;
+    $tags = get_the_tags( $post->ID );
+    if ( empty( $tags ) ) { return; }
+
+    echo '<div class="post-tags">';
+    echo '<span class="fa fa-tag"></span>';
+
+    foreach( get_the_tags( $post->ID ) as $tag ) {
+        echo '<a href="' . get_tag_link( $tag->term_id ) . '">#' . $tag->name . '</a>';
+    }
+    echo '</div>';
+}
+
+
+function postmodern_caption_shortcode( $empty, $attr, $content ) {
+	$attr = shortcode_atts( array(
+		'id'      => '',
+		'align'   => 'alignnone',
+		'width'   => '',
+		'caption' => ''
+	), $attr );
+
+	if ( 1 > (int) $attr['width'] || empty( $attr['caption'] ) ) {
+		return '';
+	}
+
+	if ( $attr['id'] ) {
+		$attr['id'] = 'id="' . esc_attr( $attr['id'] ) . '" ';
+	}
+
+	return '<figure ' . $attr['id']
+	. 'class="wp-caption ' . esc_attr( $attr['align'] ) . '" '
+	. 'style="max-width: ' . ( 10 + (int) $attr['width'] ) . 'px;">'
+	. do_shortcode( $content )
+	. '<figcaption>' . $attr['caption'] . '</figcaption>'
+	. '</figure>';
+}
+add_filter( 'img_caption_shortcode', 'postmodern_caption_shortcode', 10, 3 );
+
 require get_template_directory() . '/inc/wp-scrub.php';

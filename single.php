@@ -1,32 +1,25 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-    <head>
-        <meta http-equiv="content-type" content="<?php bloginfo( 'html_type' ); ?>" charset="<?php bloginfo( 'charset' ); ?>" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-        <link rel="profile" href="http://gmpg.org/xfn/11">
-        <?php wp_head(); ?>
-    </head>
+<?php
+/**
+ * Single Post Template
+ *
+ * @package Postmodern
+ */
 
-    <body <?php body_class(); ?>>
+get_header(); ?>
 
-        <?php get_template_part( 'header' ); ?>
 
-        <?php if ( have_posts() ) :
-            while ( have_posts() ) : the_post();
-                get_template_part( 'content' );
-            endwhile;
+<?php if ( have_posts() ) :
+    while ( have_posts() ) : the_post();
+        get_template_part( 'content' );
+    endwhile;
 
-        else : ?>
+else : ?>
 
-            <div class="post">
-                <p><?php _e( 'Sorry, the page you requested cannot be found.', 'postmodern' ); ?></p>
-            </div>
+    <div class="post">
+        <p><?php _e( 'Sorry, the page you requested cannot be found.', 'postmodern' ); ?></p>
+    </div>
 
-        <?php endif; ?>
+<?php endif; ?>
 
-        <?php get_template_part( 'footer' ); ?>
 
-        <?php wp_footer(); ?>
-
-    </body>
-</html>
+<?php get_footer(); ?>
