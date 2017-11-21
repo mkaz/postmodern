@@ -175,16 +175,18 @@ input:-ms-input-placeholder { color: #999; }
 
 
 header.global {
-	max-width: $content-width;
+	width: 100%;
 	margin: 0 auto 3.0rem auto;
 	border-bottom: 1px solid $accent;
-	padding: 16px 8px 8px 8px;
+	box-shadow: 0 1px 2px #CCC;
+	padding: 16px 8% 8px 8%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 
 
 	div.site-branding {
 		display: flex;
+		align-items: center;
 		width: 100%;
 		min-width: 300px;
 		margin-right: 32px;
@@ -192,13 +194,14 @@ header.global {
 		img.avatar {
 			display: block;
 			margin-right: 32px;
-			width: 128px;
-			border-radius: 64px;
+			width: 96px;
+			border-radius: 48px;
 		}
 
 		.logo {
 			display: block;
 			width: 128px;
+			margin-bottom: 20px;
 		}
 
 		.camera-logo {
@@ -207,9 +210,11 @@ header.global {
 			margin-right: 12px;
 		}
 
-		.site-description {
-			line-height: 1.4rem;
-			margin-top: 12px;
+		@media only screen and ( max-width: 544px ) {
+			img.avatar {
+				width: 64px;
+				border-radius: 32px;
+			}
 		}
 	}
 
@@ -230,19 +235,29 @@ header.global {
 		}
 	}
 
-	@media only screen and ( max-width: 780px ) {
-		div#extended-menu {
+	@media only screen and ( max-width: 730px ) {
+		div.menu-extended-menu-container {
 			display: none;
 		}
 	}
 
-	@media only screen and ( max-width: 480px ) {
+	@media only screen and ( max-width: 544px ) {
 		nav {
 			display: none;
 		}
 	}
 }
 
+@media only screen and ( min-width: 1280px ) {
+	header.global {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+}
+
+body.archive article,
+body.category article,
+body.search article,
 body.home article {
 	max-width: $content-width;
 	margin: 0 auto 2.0rem auto;
@@ -521,11 +536,11 @@ input[type='tel'],
 input[type='text'],
 input[type='url'] {
     border: 1px solid #CCCCCC;
-    color: #111;
+    color: #333;
     display: block;
     font-size: 0.9em;
     margin: 0 0 15px 0;
-    padding: 15px;
+    padding: 8px;
     width: 100%;
 }
 
@@ -537,12 +552,12 @@ textarea {
 input[type='button'],
 input.button,
 input[type='submit'] {
-    background: #111;
+    background: #333;
     border: none;
     color: white;
     display: inline-block;
     font-size: 14px;
-    padding: 14px 24px;
+    padding: 8px 24px;
 }
 
 input[type='button']:hover,
@@ -687,10 +702,60 @@ h3.comment-reply-title {
 .pagination { text-align: center; }
 .pagination * + * { margin-left: 30px; }
 
+
+section.widget-area {
+	width: 100%;
+	background-color: #EEEEEE;
+	margin: 4.0rem auto 0 auto;
+	padding: 0rem 4.0rem 4.0rem 4.0rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	font-size: 1.0rem;
+
+	aside {
+		max-width: 200px;
+		width: 100%;
+		margin: 4.0rem 3.0rem 0 0;
+
+		h4 {
+			font-size: 1.3rem;
+			margin: 0;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	aside:last-child {
+		margin-right: 0;
+	}
+
+	@media only screen and ( max-width: 640px ) {
+		aside {
+			margin-right: 0;
+		}
+
+		li {
+			margin-bottom: 1.0rem;
+		}
+	}
+}
+
+@media only screen and ( min-width: 1280px ) {
+	section.widget-area {
+		padding: 0rem 13% 4.0rem 13%;
+	}
+}
+
+
 footer.global {
 	width: 100%;
-	background-color: #CCCCCC;
-	margin: 4.0rem auto 0 auto;
+	background-color: #333333;
+	color: #F0F0F0;
+	margin: 0 auto;
     padding: 0.75rem 1.0rem;
     text-align: center;
 	font-size: 1.0rem;

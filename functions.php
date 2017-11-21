@@ -5,23 +5,13 @@
  */
 
 function postmodern_setup() {
-
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'post-thumbnails' );
     add_image_size( 'post-image', 1920, 9999 );
     add_theme_support( 'title-tag' );
-
-    register_nav_menu( 'primary-menu', __( 'Primary Menu', 'postmodern' ) );
-    register_nav_menu( 'extended-menu', __( 'Extended Menu', 'postmodern' ) );
-    load_theme_textdomain( 'postmodern', get_template_directory() . '/languages' );
-
-    $locale_file = get_template_directory() . "/languages/" . get_locale();
-    if ( is_readable( $locale_file ) ) {
-        require_once( $locale_file );
-    }
-
 }
 add_action( 'after_setup_theme', 'postmodern_setup' );
+
 
 
 function postmodern_load_style() {
@@ -38,6 +28,47 @@ function postmodern_excerpt_length( $length ) {
 	return 27;
 }
 add_filter( 'excerpt_length', 'postmodern_excerpt_length', 999 );
+
+
+function postmodern_register_menus() {
+    register_nav_menus( array(
+    	'primary-menu' => 'Primary Menu',
+    	'extended-menu' => 'Secondary Menu',
+    ) );
+}
+add_action( 'init', 'postmodern_register_menus' );
+
+
+function postmodern_widgets_init() {
+	register_sidebar( array(
+		'name'          => 'Footer Left Widget Area',
+		'id'            => 'footer_left',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Center Widget Area',
+		'id'            => 'footer_center',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	) );
+
+
+	register_sidebar( array(
+		'name'          => 'Footer Right Widget Area',
+		'id'            => 'footer_right',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	) );
+}
+add_action( 'widgets_init', 'postmodern_widgets_init' );
 
 
 
