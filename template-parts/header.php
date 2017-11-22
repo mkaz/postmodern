@@ -14,11 +14,12 @@
             <div class="site-branding">
                 <a href="<?php echo esc_url( home_url() ); ?>">
                     <?php echo get_avatar(
-                        'marcus@automattic.com', 96, null, 'Marcus Kazmierczak Profile Photo' );
+                        'marcus@automattic.com', 72, null, 'Marcus Kazmierczak Profile Photo' );
                     ?>
                 </a>
                 <div class="title">
                     <img src="/img/mkaz.svg" class="logo" alt="mkaz.com"/>
+                    <h5 class="subtitle"><?php echo get_bloginfo( 'description' ); ?></h5>
                 </div>
             </div>
 

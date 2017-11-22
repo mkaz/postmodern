@@ -24,7 +24,7 @@ $article-font: "Noto Serif", serif;
 $bg-color: white;
 $fg-color: #444444;
 
-$header-bg: #D9D9D9;
+$header-bg: #F4F2F0;
 $header-height: 56px;
 
 $link-color: #2180D1;
@@ -177,9 +177,10 @@ input:-ms-input-placeholder { color: #999; }
 header.global {
 	width: 100%;
 	margin: 0 auto 3.0rem auto;
+	background-color: $header-bg;
 	border-bottom: 1px solid $accent;
-	box-shadow: 0 1px 2px #CCC;
-	padding: 16px 8% 8px 8%;
+
+	padding: 0 16px 8px 16px;
 	display: flex;
 	justify-content: space-evenly;
 
@@ -193,15 +194,15 @@ header.global {
 
 		img.avatar {
 			display: block;
-			margin-right: 32px;
-			width: 96px;
-			border-radius: 48px;
+			margin-right: 24px;
+			width: 72px;
+			border-radius: 36px;
 		}
 
 		.logo {
 			display: block;
 			width: 128px;
-			margin-bottom: 20px;
+			margin-bottom: 4px;
 		}
 
 		.camera-logo {
@@ -210,11 +211,11 @@ header.global {
 			margin-right: 12px;
 		}
 
-		@media only screen and ( max-width: 544px ) {
-			img.avatar {
-				width: 64px;
-				border-radius: 32px;
-			}
+		h5.subtitle {
+			margin: 0;
+			padding: 0;
+			font-size: 1.2rem;
+			font-weight: 400;
 		}
 	}
 
@@ -245,13 +246,6 @@ header.global {
 		nav {
 			display: none;
 		}
-	}
-}
-
-@media only screen and ( min-width: 1280px ) {
-	header.global {
-		padding-left: 20%;
-		padding-right: 20%;
 	}
 }
 

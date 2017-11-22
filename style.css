@@ -155,9 +155,9 @@ input:-ms-input-placeholder {
 header.global {
   width: 100%;
   margin: 0 auto 3.0rem auto;
+  background-color: #F4F2F0;
   border-bottom: 1px solid #EC2D73;
-  box-shadow: 0 1px 2px #CCC;
-  padding: 16px 8% 8px 8%;
+  padding: 0 16px 8px 16px;
   display: flex;
   justify-content: space-evenly; }
   header.global div.site-branding {
@@ -168,21 +168,22 @@ header.global {
     margin-right: 32px; }
     header.global div.site-branding img.avatar {
       display: block;
-      margin-right: 32px;
-      width: 96px;
-      border-radius: 48px; }
+      margin-right: 24px;
+      width: 72px;
+      border-radius: 36px; }
     header.global div.site-branding .logo {
       display: block;
       width: 128px;
-      margin-bottom: 20px; }
+      margin-bottom: 4px; }
     header.global div.site-branding .camera-logo {
       display: inline-block;
       width: 64px;
       margin-right: 12px; }
-    @media only screen and (max-width: 544px) {
-      header.global div.site-branding img.avatar {
-        width: 64px;
-        border-radius: 32px; } }
+    header.global div.site-branding h5.subtitle {
+      margin: 0;
+      padding: 0;
+      font-size: 1.2rem;
+      font-weight: 400; }
   header.global nav {
     font-size: 0.9rem;
     display: flex;
@@ -200,11 +201,6 @@ header.global {
   @media only screen and (max-width: 544px) {
     header.global nav {
       display: none; } }
-
-@media only screen and (min-width: 1280px) {
-  header.global {
-    padding-left: 20%;
-    padding-right: 20%; } }
 
 body.archive article,
 body.category article,
