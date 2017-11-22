@@ -18,8 +18,12 @@
                     ?>
                 </a>
                 <div class="title">
-                    <h3><?php echo get_bloginfo( 'title' ); ?></h2>
-                    <h4><?php echo get_bloginfo( 'description' ); ?></h3>
+                    <h3>
+                        <a href="<?php echo esc_url( home_url() ); ?>">
+                            <?php echo get_bloginfo( 'title' ); ?>
+                        </a>
+                    </h3>
+                    <h4><?php echo get_bloginfo( 'description' ); ?></h4>
                 </div>
             </div>
 
