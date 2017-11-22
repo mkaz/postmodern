@@ -22,14 +22,6 @@ function postmodern_load_style() {
 add_action( 'wp_print_styles', 'postmodern_load_style' );
 
 
-function postmodern_portfolio_enqueue() {
-	if ( is_page ('portfolio-page') ) {
-		wp_enqueue_script( 'postmodern-portfolio', get_template_directory_uri() . '/portfolio.js', array( 'jquery', 'masonry' ), '20150624', true );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'postmodern_portfolio_enqueue' );
-
-
 function postmodern_excerpt_length( $length ) {
 	return 27;
 }

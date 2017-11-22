@@ -638,22 +638,46 @@ section.widget-area {
 
 main.portfolio {
   margin: 1.0rem auto;
-  max-width: 1280px;
   padding: 0 1.0rem; }
+  main.portfolio header {
+    text-align: center; }
 
 .portfolio-list {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center; }
   .portfolio-list article {
-    max-width: 320px;
-    margin: 32px; }
+    max-width: 360px;
+    max-height: 240px;
+    overflow-y: hidden;
+    margin: 32px;
+    position: relative;
+    z-index: 1;
+    line-height: 1.0;
+    text-align: center; }
     .portfolio-list article h2 {
-      font-size: 1.2rem;
-      margin: 4px 0 0 0; }
-    .portfolio-list article a, .portfolio-list article a:visited {
-      color: #333; }
+      font-size: 1.4rem;
+      margin: 4px 0 0 0;
+      color: #FFF;
+      left: 50%;
+      margin-bottom: 0;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      text-shadow: 0 1px 0 black;
+      transform: translate(-50%, -50%);
+      transition: all 250ms ease;
+      -moz-transition: all 250ms ease;
+      -ms-transform: translate(-50%, 50%);
+      -o-transition: all 250ms ease;
+      -webkit-transform: translate(-50%, -50%);
+      -webkit-transition: all 250ms ease; }
     .portfolio-list article a:hover {
       color: #EC2D73; }
+    .portfolio-list article .portfolio-thumbnail:hover img {
+      filter: brightness(0.75); }
+    .portfolio-list article .portfolio-thumbnail:hover h2 {
+      opacity: 1; }
 
 footer.global {
   width: 100%;
