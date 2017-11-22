@@ -199,23 +199,22 @@ header.global {
 			border-radius: 36px;
 		}
 
-		.logo {
-			display: block;
-			width: 128px;
-			margin-bottom: 4px;
-		}
+		.title {
+			h3 {
+				font-family: $article-font;
+				margin: 0;
+				padding: 0;
+				font-size: 2.8rem;
+				font-weight: 700;
+				line-height: 1.0;
+			}
 
-		.camera-logo {
-			display: inline-block;
-			width: 64px;
-			margin-right: 12px;
-		}
-
-		h5.subtitle {
-			margin: 0;
-			padding: 0;
-			font-size: 1.2rem;
-			font-weight: 400;
+			h4 {
+				margin: 0;
+				padding: 0;
+				font-size: 1.2rem;
+				font-weight: 400;
+			}
 		}
 	}
 

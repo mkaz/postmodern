@@ -18,8 +18,8 @@
                     ?>
                 </a>
                 <div class="title">
-                    <img src="/img/mkaz.svg" class="logo" alt="mkaz.com"/>
-                    <h5 class="subtitle"><?php echo get_bloginfo( 'description' ); ?></h5>
+                    <h3><?php echo get_bloginfo( 'title' ); ?></h2>
+                    <h4><?php echo get_bloginfo( 'description' ); ?></h3>
                 </div>
             </div>
 
