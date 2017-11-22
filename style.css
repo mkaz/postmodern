@@ -636,6 +636,25 @@ section.widget-area {
   section.widget-area {
     padding: 0rem 13% 4.0rem 13%; } }
 
+main.portfolio {
+  margin: 1.0rem auto;
+  max-width: 1280px;
+  padding: 0 1.0rem; }
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap; }
+  .portfolio-list article {
+    max-width: 320px;
+    margin: 32px; }
+    .portfolio-list article h2 {
+      font-size: 1.2rem;
+      margin: 4px 0 0 0; }
+    .portfolio-list article a, .portfolio-list article a:visited {
+      color: #333; }
+    .portfolio-list article a:hover {
+      color: #EC2D73; }
+
 footer.global {
   width: 100%;
   background-color: #333333;

@@ -750,6 +750,34 @@ section.widget-area {
 	}
 }
 
+main.portfolio {
+	margin: 1.0rem auto;
+	max-width: 1280px;
+	padding: 0 1.0rem;
+}
+
+.portfolio-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	article {
+		max-width: 320px;
+		margin: 32px;
+
+		h2 {
+			font-size: 1.2rem;
+			margin: 4px 0 0 0;
+		}
+
+		a, a:visited {
+			color: #333;
+		}
+		a:hover { 
+			color: $accent;
+		}
+	}
+}
+
 
 footer.global {
 	width: 100%;
