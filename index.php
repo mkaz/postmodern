@@ -23,8 +23,8 @@ else : ?>
 
 <?php if ( ( ! is_singular() ) && ( $wp_query->post_count >= get_option( 'posts_per_page' ) ) ) : ?>
     <div class="pagination">
-        <?php previous_posts_link( '&larr; ' . __( 'Newer posts', 'postmodern' ) ); ?>
-        <?php next_posts_link( __( 'Older posts', 'postmodern') . ' &rarr;' ); ?>
+        <?php next_posts_link( '<span class="fa fa-arrow-left"></span> ' . __( 'Older posts', 'postmodern')  ); ?>
+        <?php previous_posts_link( __( 'Newer posts', 'postmodern' ) . ' <span class="fa fa-arrow-right"></span>' ); ?>
     </div>
 <?php endif; ?>
 

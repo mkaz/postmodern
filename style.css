@@ -502,6 +502,16 @@ th {
 tbody > tr:nth-child(even) {
   background-color: #F0F0F0; }
 
+section.prevnext {
+  max-width: 720px;
+  margin: 3.0rem auto;
+  padding: 3.0rem 0;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem; }
+
 .comments,
 .comment-respond {
   max-width: 720px;
@@ -595,6 +605,7 @@ h3.comment-reply-title {
   display: block; }
 
 .pagination {
+  margin: 2.0rem 0;
   text-align: center; }
 
 .pagination * + * {

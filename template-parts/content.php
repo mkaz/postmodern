@@ -43,6 +43,4 @@
 
     <?php if ( is_singular() ) { wp_link_pages(); }?>
 
-    <?php if ( is_singular() ) { comments_template(); } ?>
-
 </article>
