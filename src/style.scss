@@ -199,6 +199,11 @@ header.global {
 			border-radius: 32px;
 		}
 
+		.logo {
+			width: 92px;
+			margin-right: 16px;
+		}
+
 		.title {
 			h3 {
 				font-family: $article-font;
@@ -221,10 +226,10 @@ header.global {
 	nav {
 		font-size: 0.9rem;
 		display: flex;
-		margin: 8px;
+		margin: 0 8px 8px 8px;
 
 
-		ul {
+		ul#menu-header-menu {
 			margin: 0 0 0 16px;
 			padding: 0;
 			min-width: 320px;
@@ -244,13 +249,70 @@ header.global {
 		a:hover {
 			color: $accent;
 		}
+
+		ul#menu-social-menu {
+			margin: 0 0 0 16px;
+			padding: 0;
+			line-height: 1.0;
+			white-space: nowrap;
+
+		    a:before {
+		   		display: inline-block;
+		   		font-family: 'FontAwesome';
+				font-size: 2.0rem;
+		   		vertical-align: top;
+		   		-webkit-font-smoothing: antialiased;
+		   	}
+
+			// hide text to just show icon
+		    a span {
+				line-height: 1.0;
+				font-size: 0;
+		    }
+
+			a[href*='facebook.com']::before { content: '\f230'; }
+			a[href*='twitter.com']::before { content: '\f081'; }
+			a[href*='instagram.com']::before { content: '\f16d'; }
+			a[href*='kazmierczaks.com']::before { content: '\f19a'; }
+			a[href*='wordpress.com']::before { content: '\f19a'; }
+			a[href*='wordpress.org']::before { content: '\f19a'; }
+			a[href*='dribbble.com']::before { content: '\f17d'; }
+			a[href*='plus.google.com']::before { content: '\f2b3'; }
+			a[href*='pinterest.com']::before { content: '\f0d3'; }
+			a[href*='flickr.com']::before { content: '\f16e'; }
+			a[href*='github.com']::before { content: '\f092'; }
+			a[href*='youtube.com']::before { content: '\f166'; }
+			a[href*='vimeo.com']::before { content: '\f194'; }
+			a[href*='linkedin.com']::before { content: '\f08c'; }
+			a[href*='codepen.io']::before { content: '\f1cb'; }
+			a[href*='mailto:']::before { content: '\f0e0'; }
+			a[href*='reddit.com']::before { content: '\f1a2'; }
+			a[href*='/feed/']::before { content: '\f143'; }
+			a[href*='spotify.com']::before { content: '\f1bc'; }
+
+		}
 	}
 
-	@media only screen and ( max-width: 544px ) {
+	@media only screen and ( max-width: 800px ) {
+		ul#menu-social-menu {
+			display: none;
+		}
+	}
+
+	@media only screen and ( max-width: 708px ) {
 		nav {
 			display: none;
 		}
 	}
+}
+
+body.archive main,
+body.category main,
+body.search main,
+body.home main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 body.archive article,
@@ -267,8 +329,8 @@ body.home article {
 	.featured-image {
 		margin: 4px 0 0 0;
 		padding-right: 1.5rem;
-		max-width: 300px;
-		max-height: 240px;
+		width: 276px;
+		height: 184px;
 		overflow-y: hidden;
 	}
 
@@ -284,8 +346,7 @@ body.home article {
 	}
 
 	section.post {
-		max-width: 390px;
-		width: 100%;
+		width: 360px;
 		font-size: 1.0rem;
 	}
 
@@ -299,6 +360,7 @@ body.home article {
 		margin: 1.0rem 0;
 		padding: 0;
 		color: #777;
+		min-height: 70px;
 	}
 
 	@media only screen and ( max-width: 708px ) {

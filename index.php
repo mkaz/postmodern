@@ -7,7 +7,7 @@
 
 get_template_part( 'template-parts/header' ); ?>
 
-
+<main>
 <?php if ( have_posts() ) :
     while ( have_posts() ) : the_post();
         get_template_part( 'template-parts/content', 'excerpt' );
@@ -20,6 +20,7 @@ else : ?>
     </div>
 
 <?php endif; ?>
+</main>
 
 <?php if ( ( ! is_singular() ) && ( $wp_query->post_count >= get_option( 'posts_per_page' ) ) ) : ?>
     <div class="pagination">

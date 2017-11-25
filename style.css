@@ -172,6 +172,9 @@ header.global {
       margin-right: 24px;
       width: 64px;
       border-radius: 32px; }
+    header.global div.site-branding .logo {
+      width: 92px;
+      margin-right: 16px; }
     header.global div.site-branding .title h3 {
       font-family: "Noto Serif", serif;
       margin: 0;
@@ -187,8 +190,8 @@ header.global {
   header.global nav {
     font-size: 0.9rem;
     display: flex;
-    margin: 8px; }
-    header.global nav ul {
+    margin: 0 8px 8px 8px; }
+    header.global nav ul#menu-header-menu {
       margin: 0 0 0 16px;
       padding: 0;
       min-width: 320px;
@@ -201,9 +204,72 @@ header.global {
       color: #666; }
     header.global nav a:hover {
       color: #EC2D73; }
-  @media only screen and (max-width: 544px) {
+    header.global nav ul#menu-social-menu {
+      margin: 0 0 0 16px;
+      padding: 0;
+      line-height: 1.0;
+      white-space: nowrap; }
+      header.global nav ul#menu-social-menu a:before {
+        display: inline-block;
+        font-family: 'FontAwesome';
+        font-size: 2.0rem;
+        vertical-align: top;
+        -webkit-font-smoothing: antialiased; }
+      header.global nav ul#menu-social-menu a span {
+        line-height: 1.0;
+        font-size: 0; }
+      header.global nav ul#menu-social-menu a[href*='facebook.com']::before {
+        content: '\f230'; }
+      header.global nav ul#menu-social-menu a[href*='twitter.com']::before {
+        content: '\f081'; }
+      header.global nav ul#menu-social-menu a[href*='instagram.com']::before {
+        content: '\f16d'; }
+      header.global nav ul#menu-social-menu a[href*='kazmierczaks.com']::before {
+        content: '\f19a'; }
+      header.global nav ul#menu-social-menu a[href*='wordpress.com']::before {
+        content: '\f19a'; }
+      header.global nav ul#menu-social-menu a[href*='wordpress.org']::before {
+        content: '\f19a'; }
+      header.global nav ul#menu-social-menu a[href*='dribbble.com']::before {
+        content: '\f17d'; }
+      header.global nav ul#menu-social-menu a[href*='plus.google.com']::before {
+        content: '\f2b3'; }
+      header.global nav ul#menu-social-menu a[href*='pinterest.com']::before {
+        content: '\f0d3'; }
+      header.global nav ul#menu-social-menu a[href*='flickr.com']::before {
+        content: '\f16e'; }
+      header.global nav ul#menu-social-menu a[href*='github.com']::before {
+        content: '\f092'; }
+      header.global nav ul#menu-social-menu a[href*='youtube.com']::before {
+        content: '\f166'; }
+      header.global nav ul#menu-social-menu a[href*='vimeo.com']::before {
+        content: '\f194'; }
+      header.global nav ul#menu-social-menu a[href*='linkedin.com']::before {
+        content: '\f08c'; }
+      header.global nav ul#menu-social-menu a[href*='codepen.io']::before {
+        content: '\f1cb'; }
+      header.global nav ul#menu-social-menu a[href*='mailto:']::before {
+        content: '\f0e0'; }
+      header.global nav ul#menu-social-menu a[href*='reddit.com']::before {
+        content: '\f1a2'; }
+      header.global nav ul#menu-social-menu a[href*='/feed/']::before {
+        content: '\f143'; }
+      header.global nav ul#menu-social-menu a[href*='spotify.com']::before {
+        content: '\f1bc'; }
+  @media only screen and (max-width: 800px) {
+    header.global ul#menu-social-menu {
+      display: none; } }
+  @media only screen and (max-width: 708px) {
     header.global nav {
       display: none; } }
+
+body.archive main,
+body.category main,
+body.search main,
+body.home main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
 body.archive article,
 body.category article,
@@ -221,8 +287,8 @@ body.home article {
   body.home article .featured-image {
     margin: 4px 0 0 0;
     padding-right: 1.5rem;
-    max-width: 300px;
-    max-height: 240px;
+    width: 276px;
+    height: 184px;
     overflow-y: hidden; }
   body.archive article .meta,
   body.category article .meta,
@@ -244,8 +310,7 @@ body.home article {
   body.category article section.post,
   body.search article section.post,
   body.home article section.post {
-    max-width: 390px;
-    width: 100%;
+    width: 360px;
     font-size: 1.0rem; }
   body.archive article h2.title,
   body.category article h2.title,
@@ -260,7 +325,8 @@ body.home article {
   body.home article section.content p {
     margin: 1.0rem 0;
     padding: 0;
-    color: #777; }
+    color: #777;
+    min-height: 70px; }
   @media only screen and (max-width: 708px) {
     body.archive article .featured-image,
     body.category article .featured-image,
