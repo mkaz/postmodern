@@ -173,206 +173,8 @@ input::-webkit-input-placeholder { color: #999; }
 input::-moz-placeholder { color: #999; }
 input:-ms-input-placeholder { color: #999; }
 
-
-header.global {
-	width: 100%;
-	margin: 0 auto 3.0rem auto;
-	background-color: $header-bg;
-	border-bottom: 1px solid $accent;
-
-	padding: 8px 16px 8px 16px;
-	display: flex;
-	justify-content: space-evenly;
-    align-items: center;
-
-	div.site-branding {
-		display: flex;
-		align-items: center;
-		width: 100%;
-		min-width: 300px;
-		margin-right: 32px;
-
-		img.avatar {
-			display: block;
-			margin-right: 24px;
-			width: 64px;
-			border-radius: 32px;
-		}
-
-		.logo {
-			width: 92px;
-			margin-right: 16px;
-		}
-
-		.title {
-			h3 {
-				font-family: $article-font;
-				margin: 0;
-				padding: 0;
-				font-size: 2.4rem;
-				font-weight: 700;
-				line-height: 1.0;
-			}
-
-			h4 {
-				margin: 0;
-				padding: 0;
-				font-size: 1.1rem;
-				font-weight: 400;
-			}
-		}
-	}
-
-	nav {
-		font-size: 0.9rem;
-		display: flex;
-		margin: 0 8px 8px 8px;
-
-
-		ul#menu-header-menu {
-			margin: 0 0 0 16px;
-			padding: 0;
-			min-width: 320px;
-			text-align: right;
-		}
-
-		li {
-			display: inline-block;
-			margin-right: 1.5rem;
-			font-weight: 700;
-		}
-
-		a, a:visited {
-			color: #666;
-		}
-
-		a:hover {
-			color: $accent;
-		}
-
-		ul#menu-social-menu {
-			margin: 0 0 0 16px;
-			padding: 0;
-			line-height: 1.0;
-			white-space: nowrap;
-
-		    a:before {
-		   		display: inline-block;
-		   		font-family: 'FontAwesome';
-				font-size: 2.0rem;
-		   		vertical-align: top;
-		   		-webkit-font-smoothing: antialiased;
-		   	}
-
-			// hide text to just show icon
-		    a span {
-				line-height: 1.0;
-				font-size: 0;
-		    }
-
-			a[href*='facebook.com']::before { content: '\f230'; }
-			a[href*='twitter.com']::before { content: '\f081'; }
-			a[href*='instagram.com']::before { content: '\f16d'; }
-			a[href*='kazmierczaks.com']::before { content: '\f19a'; }
-			a[href*='wordpress.com']::before { content: '\f19a'; }
-			a[href*='wordpress.org']::before { content: '\f19a'; }
-			a[href*='dribbble.com']::before { content: '\f17d'; }
-			a[href*='plus.google.com']::before { content: '\f2b3'; }
-			a[href*='pinterest.com']::before { content: '\f0d3'; }
-			a[href*='flickr.com']::before { content: '\f16e'; }
-			a[href*='github.com']::before { content: '\f092'; }
-			a[href*='youtube.com']::before { content: '\f166'; }
-			a[href*='vimeo.com']::before { content: '\f194'; }
-			a[href*='linkedin.com']::before { content: '\f08c'; }
-			a[href*='codepen.io']::before { content: '\f1cb'; }
-			a[href*='mailto:']::before { content: '\f0e0'; }
-			a[href*='reddit.com']::before { content: '\f1a2'; }
-			a[href*='/feed/']::before { content: '\f143'; }
-			a[href*='spotify.com']::before { content: '\f1bc'; }
-
-		}
-	}
-
-	@media only screen and ( max-width: 800px ) {
-		ul#menu-social-menu {
-			display: none;
-		}
-	}
-
-	@media only screen and ( max-width: 708px ) {
-		nav {
-			display: none;
-		}
-	}
-}
-
-body.archive main,
-body.category main,
-body.search main,
-body.home main {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-
-body.archive article,
-body.category article,
-body.search article,
-body.home article {
-	max-width: $content-width;
-	margin: 0 auto 2.0rem auto;
-	border-bottom: 1px solid #CCC;
-	padding: 0 0 2.0rem 1.0rem;
-	display: flex;
-	flex-wrap: wrap;
-
-	.featured-image {
-		margin: 4px 0 0 0;
-		padding-right: 1.5rem;
-		width: 276px;
-		height: 184px;
-		overflow-y: hidden;
-	}
-
-	.meta {
-		margin: 0 0 8px 0;
-		padding: 0;
-	}
-
-	.post-tags a, .post-tags a:visited {
-		opacity: 0.8;
-		font-size: 0.9rem;
-		margin: 0 6px;
-	}
-
-	section.post {
-		width: 360px;
-		font-size: 1.0rem;
-	}
-
-	h2.title {
-		font-size: 1.8rem;
-		margin: 0 0 8px 0;
-		padding: 0;
-	}
-
-	section.content p {
-		margin: 1.0rem 0;
-		padding: 0;
-		color: #777;
-		min-height: 70px;
-	}
-
-	@media only screen and ( max-width: 708px ) {
-		.featured-image {
-			margin: 4px auto 16px auto;
-			max-width: 390px;
-		}
-	}
-
-}
-
-
+@import 'header';
+@import 'indexpages';
 
 article {
     display: block;
@@ -415,9 +217,7 @@ article {
 	}
 }
 
-body.single article .meta {
-  margin-bottom: 3.0rem;
-}
+
 
 span.post-date,
 span.post-category {
@@ -478,6 +278,10 @@ blockquote cite:before { content: '— '; }
 	margin: 0 auto;
 	font-family: $article-font;
 
+	h1, h2, h3, h4, h5, h6 {
+		padding: 0 1.0rem;
+	}
+
 	p {
     	line-height: 1.55;
 		margin: 3.0rem 0 3.0rem 0;
@@ -504,7 +308,7 @@ blockquote cite:before { content: '— '; }
 	ol ol { list-style: lower-alpha; }
 	ol ol ol { list-style: lower-roman; }
 
-	ul { margin-top: -2.0rem; }
+	ul.tight { margin-top: -2.0rem; }
 
 	li {
     	line-height: 1.5;
@@ -669,220 +473,14 @@ section.prevnext {
 	font-size: 0.9rem;
 }
 
-.comments,
-.comment-respond {
-	max-width: $content-width;
-	margin: 4.0rem auto;
-	padding: 0 1.0rem;
-	font-family: $default-font;
-}
-
-.comment {
-	margin-top: 4.0rem;
-	font-size: 1.0rem;
-	color: #777;
-}
-
-.comment p {
-	margin-top: 1.0rem;
-	margin-left: 80px;
-	margin-bottom: 0.5rem;
-	padding: 0;
-}
-
-.comment a {
-	text-decoration: underline;
-;}
-
-.commentlist > .comment:first-child { margin-top: 0; }
-
-.comment .comment {
-	margin: 40px 0 0 80px; }
-
-.comment-author a,
-.comment-meta a,
-.comment .reply a {
-    text-decoration: none;
-}
-
-.comment-author {
-    padding-left: 80px;
-    position: relative;
-}
-
-.bypostauthor .comment-author cite {
-	font-weight: 700;
-}
-
-.comment-author .says {
-	display: none;
-}
-
-.comment-author .avatar {
-    position: absolute;
-    left: 0;
-    top: 1px;
-    width: 72px;
-}
-
-.comment-awaiting-moderation {
-    font-size: 14px;
-    font-style: italic;
-    padding-left: 50px;
-}
-
-.comment-meta {
-    font-size: 14px;
-    margin: -4px 0 20px 0;
-    padding-left: 80px;
-}
-
-.comment-meta a,
-.comment-meta a:hover { color: #999; }
-
-.comment .reply {
-    font-size: 14px;
-    font-style: italic;
-	margin-left: 80px;
-}
-
-.comment .reply a { color: #999; }
-.comment .reply a:hover { color: $accent; }
-
-.comment-respond p { margin: 1.0rem 0; padding: 0;}
-
-p.logged-in-as {
-	margin: 0;
-	font-size: 1.0rem;
-}
-
-/* resize to h4 size, markup from wordpress core */
-h3.comment-reply-title {
-    font-size: 1.6rem;
-    margin-bottom: 6px;
-}
-
-.logged-in-as {
-    margin: -10px 0 30px;
-}
-
-.comment-respond label { display: block; }
-
 .pagination {
 	margin: 2.0rem 0;
 	text-align: center;
 }
 .pagination * + * { margin-left: 30px; }
 
-section.widget-area {
-	width: 100%;
-	background-color: #EEEEEE;
-	margin: 4.0rem auto 0 auto;
-	padding: 0rem 4.0rem 4.0rem 4.0rem;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	font-size: 1.0rem;
-
-	aside {
-		max-width: 200px;
-		width: 100%;
-		margin: 4.0rem 3.0rem 0 0;
-
-		h4 {
-			font-size: 1.3rem;
-			margin: 0;
-		}
-
-		ul {
-			margin: 0;
-			padding: 0;
-		}
-	}
-
-	aside:last-child {
-		margin-right: 0;
-	}
-
-	@media only screen and ( max-width: 640px ) {
-		aside {
-			margin-right: 0;
-		}
-
-		li {
-			margin-bottom: 1.0rem;
-		}
-	}
-}
-
-@media only screen and ( min-width: 1280px ) {
-	section.widget-area {
-		padding: 0rem 13% 4.0rem 13%;
-	}
-}
-
-main.portfolio {
-	margin: 1.0rem auto;
-	padding: 0 1.0rem;
-
-	header {
-		text-align: center;
-	}
-}
-
-.portfolio-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-
-	article {
-		max-width: 360px;
-		max-height: 240px;
-		overflow-y: hidden;
-		margin: 32px;
-		position: relative;
-		z-index: 1;
-		line-height: 1.0;
-		text-align: center;
-
-		h2 {
-			font-size: 1.4rem;
-			margin: 4px 0 0 0;
-			color: #FFF;
-			left: 50%;
-			margin-bottom: 0;
-			opacity: 0;
-			position: absolute;
-			top: 50%;
-			text-shadow: 0 1px 0 black;
-			transform: translate(-50%, -50%);
-			transition: all 250ms ease;
-			-moz-transition: all 250ms ease;
-			-ms-transform: translate(-50%, 50%);
-			-o-transition: all 250ms ease;
-			-webkit-transform: translate(-50%, -50%);
-			-webkit-transition: all 250ms ease;
-		}
-
-		a:hover {
-			color: $accent;
-		}
-
-		.portfolio-thumbnail:hover img {
-			filter: brightness( 0.75 );
-		}
-
-		.portfolio-thumbnail:hover h2 {
-			opacity: 1;
-		}
-
-	}
-
-
-}
-
-
 footer.global {
+	clear:both;
 	width: 100%;
 	background-color: #333333;
 	color: #F0F0F0;
@@ -891,9 +489,30 @@ footer.global {
     text-align: center;
 	font-size: 1.0rem;
 
+	a, a:visited {
+		color: #84C0F3;
+	}
+	a:hover {
+		color: $accent;
+	}
+
 	p {
     	line-height: 1;
 		text-align: center;
 	}
+
+	section.copyright {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		span {
+			margin-right: 32px;
+		}
+	}
+
 }
 
+@import 'portfolio';
+@import 'comments';
+@import 'widgets';

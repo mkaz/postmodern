@@ -1,0 +1,132 @@
+
+header.global {
+	width: 100%;
+	margin: 0 auto 3.0rem auto;
+	background-color: $header-bg;
+	border-bottom: 1px solid $accent;
+
+	padding: 8px 16px 8px 16px;
+	display: flex;
+	justify-content: space-evenly;
+    align-items: center;
+
+	div.site-branding {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		min-width: 300px;
+		margin-right: 32px;
+
+		img.avatar {
+			display: block;
+			margin-right: 24px;
+			width: 64px;
+			border-radius: 32px;
+		}
+
+		.logo {
+			width: 92px;
+			margin-right: 16px;
+		}
+
+		.title {
+			h3 {
+				font-family: $article-font;
+				margin: 0;
+				padding: 0;
+				font-size: 2.4rem;
+				font-weight: 700;
+				line-height: 1.0;
+			}
+
+			h4 {
+				margin: 0;
+				padding: 0;
+				font-size: 1.1rem;
+				font-weight: 400;
+			}
+		}
+	}
+
+	nav {
+		font-size: 0.9rem;
+		display: flex;
+		margin: 0 8px 8px 8px;
+
+
+		ul#menu-header-menu {
+			margin: 0 0 0 16px;
+			padding: 0;
+			min-width: 320px;
+			text-align: right;
+		}
+
+		li {
+			display: inline-block;
+			margin-right: 1.5rem;
+			font-weight: 700;
+		}
+
+		a, a:visited {
+			color: #666;
+		}
+
+		a:hover {
+			color: $accent;
+		}
+
+		ul#menu-social-menu {
+			margin: 0 0 0 16px;
+			padding: 0;
+			line-height: 1.0;
+			white-space: nowrap;
+
+		    a:before {
+		   		display: inline-block;
+		   		font-family: 'FontAwesome';
+				font-size: 2.0rem;
+		   		vertical-align: top;
+		   		-webkit-font-smoothing: antialiased;
+		   	}
+
+			// hide text to just show icon
+		    a span {
+				line-height: 1.0;
+				font-size: 0;
+		    }
+
+			a[href*='facebook.com']::before { content: '\f230'; }
+			a[href*='twitter.com']::before { content: '\f081'; }
+			a[href*='instagram.com']::before { content: '\f16d'; }
+			a[href*='kazmierczaks.com']::before { content: '\f19a'; }
+			a[href*='wordpress.com']::before { content: '\f19a'; }
+			a[href*='wordpress.org']::before { content: '\f19a'; }
+			a[href*='dribbble.com']::before { content: '\f17d'; }
+			a[href*='plus.google.com']::before { content: '\f2b3'; }
+			a[href*='pinterest.com']::before { content: '\f0d3'; }
+			a[href*='flickr.com']::before { content: '\f16e'; }
+			a[href*='github.com']::before { content: '\f092'; }
+			a[href*='youtube.com']::before { content: '\f166'; }
+			a[href*='vimeo.com']::before { content: '\f194'; }
+			a[href*='linkedin.com']::before { content: '\f08c'; }
+			a[href*='codepen.io']::before { content: '\f1cb'; }
+			a[href*='mailto:']::before { content: '\f0e0'; }
+			a[href*='reddit.com']::before { content: '\f1a2'; }
+			a[href*='/feed/']::before { content: '\f143'; }
+			a[href*='spotify.com']::before { content: '\f1bc'; }
+
+		}
+	}
+
+	@media only screen and ( max-width: 800px ) {
+		ul#menu-social-menu {
+			display: none;
+		}
+	}
+
+	@media only screen and ( max-width: 708px ) {
+		nav {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,98 @@
+.comments,
+.comment-respond {
+	max-width: $content-width;
+	margin: 4.0rem auto;
+	padding: 0 1.0rem;
+	font-family: $default-font;
+}
+
+.comment {
+	margin-top: 4.0rem;
+	font-size: 1.0rem;
+	color: #777;
+}
+
+.comment p {
+	margin-top: 1.0rem;
+	margin-left: 80px;
+	margin-bottom: 0.5rem;
+	padding: 0;
+}
+
+.comment a {
+	text-decoration: underline;
+;}
+
+.commentlist > .comment:first-child { margin-top: 0; }
+
+.comment .comment {
+	margin: 40px 0 0 80px; }
+
+.comment-author a,
+.comment-meta a,
+.comment .reply a {
+    text-decoration: none;
+}
+
+.comment-author {
+    padding-left: 80px;
+    position: relative;
+}
+
+.bypostauthor .comment-author cite {
+	font-weight: 700;
+}
+
+.comment-author .says {
+	display: none;
+}
+
+.comment-author .avatar {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 72px;
+}
+
+.comment-awaiting-moderation {
+    font-size: 14px;
+    font-style: italic;
+    padding-left: 50px;
+}
+
+.comment-meta {
+    font-size: 14px;
+    margin: -4px 0 20px 0;
+    padding-left: 80px;
+}
+
+.comment-meta a,
+.comment-meta a:hover { color: #999; }
+
+.comment .reply {
+    font-size: 14px;
+    font-style: italic;
+	margin-left: 80px;
+}
+
+.comment .reply a { color: #999; }
+.comment .reply a:hover { color: $accent; }
+
+.comment-respond p { margin: 1.0rem 0; padding: 0;}
+
+p.logged-in-as {
+	margin: 0;
+	font-size: 1.0rem;
+}
+
+/* resize to h4 size, markup from wordpress core */
+h3.comment-reply-title {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+}
+
+.logged-in-as {
+    margin: -10px 0 30px;
+}
+
+.comment-respond label { display: block; }

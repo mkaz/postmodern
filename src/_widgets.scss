@@ -1,0 +1,46 @@
+section.widget-area {
+	width: 100%;
+	background-color: #EEEEEE;
+	margin: 4.0rem auto 0 auto;
+	padding: 0rem 4.0rem 4.0rem 4.0rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	font-size: 1.0rem;
+
+	aside {
+		max-width: 200px;
+		width: 100%;
+		margin: 4.0rem 3.0rem 0 0;
+
+		h4 {
+			font-size: 1.3rem;
+			margin: 0;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	aside:last-child {
+		margin-right: 0;
+	}
+
+	@media only screen and ( max-width: 640px ) {
+		aside {
+			margin-right: 0;
+		}
+
+		li {
+			margin-bottom: 1.0rem;
+		}
+	}
+}
+
+@media only screen and ( min-width: 1280px ) {
+	section.widget-area {
+		padding: 0rem 13% 4.0rem 13%;
+	}
+}
