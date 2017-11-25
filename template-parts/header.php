@@ -14,7 +14,7 @@
             <div class="site-branding">
                 <a href="<?php echo esc_url( home_url() ); ?>">
                     <?php echo get_avatar(
-                        'marcus@automattic.com', 72, null, 'Marcus Kazmierczak Profile Photo' );
+                        'marcus@automattic.com', 64, null, 'Marcus Kazmierczak Profile Photo' );
                     ?>
                 </a>
                 <div class="title">
@@ -29,7 +29,6 @@
 
             <nav>
                 <?php wp_nav_menu( array( 'theme_location' => 'primary-menu' ) ); ?>
-                <?php wp_nav_menu( array( 'theme_location' => 'extended-menu' ) ); ?>
             </nav>
 
         </header>

@@ -31,7 +31,7 @@ add_filter( 'excerpt_length', 'postmodern_excerpt_length', 999 );
 function postmodern_register_menus() {
     register_nav_menus( array(
     	'primary-menu' => 'Primary Menu',
-    	'extended-menu' => 'Secondary Menu',
+    	'social-menu' => 'Social Menu',
     ) );
 }
 add_action( 'init', 'postmodern_register_menus' );

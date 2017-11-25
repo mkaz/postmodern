@@ -180,10 +180,10 @@ header.global {
 	background-color: $header-bg;
 	border-bottom: 1px solid $accent;
 
-	padding: 0 16px 8px 16px;
+	padding: 8px 16px 8px 16px;
 	display: flex;
 	justify-content: space-evenly;
-
+    align-items: center;
 
 	div.site-branding {
 		display: flex;
@@ -195,8 +195,8 @@ header.global {
 		img.avatar {
 			display: block;
 			margin-right: 24px;
-			width: 72px;
-			border-radius: 36px;
+			width: 64px;
+			border-radius: 32px;
 		}
 
 		.title {
@@ -204,7 +204,7 @@ header.global {
 				font-family: $article-font;
 				margin: 0;
 				padding: 0;
-				font-size: 2.8rem;
+				font-size: 2.4rem;
 				font-weight: 700;
 				line-height: 1.0;
 			}
@@ -212,7 +212,7 @@ header.global {
 			h4 {
 				margin: 0;
 				padding: 0;
-				font-size: 1.2rem;
+				font-size: 1.1rem;
 				font-weight: 400;
 			}
 		}
@@ -227,17 +227,22 @@ header.global {
 		ul {
 			margin: 0 0 0 16px;
 			padding: 0;
-			min-width: 160px;
+			min-width: 320px;
+			text-align: right;
 		}
-		li {
-			display: block;
-			margin-right: 1.55rem;
-		}
-	}
 
-	@media only screen and ( max-width: 730px ) {
-		div.menu-extended-menu-container {
-			display: none;
+		li {
+			display: inline-block;
+			margin-right: 1.5rem;
+			font-weight: 700;
+		}
+
+		a, a:visited {
+			color: #666;
+		}
+
+		a:hover {
+			color: $accent;
 		}
 	}
 
