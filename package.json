@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "description": "WordPress Theme",
   "author": "Marcus Kazmierczak",
-  "license": "GPL",
+  "license": "CC-BY-NC-4.0",
   "devDependencies": {
     "stylelint-no-unsupported-browser-features": "^1.0.0"
   },
