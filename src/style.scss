@@ -290,11 +290,6 @@ section.content > *:not( img ):not( video ):not( figure ) {
 blockquote:before,
 blockquote:after { content: ''; }
 
-blockquote p {
-	color: #999;
-	font-family: 700;
-}
-
 blockquote cite:before { content: '— '; }
 
 
@@ -313,6 +308,12 @@ blockquote cite:before { content: '— '; }
 	}
 
 	p:last-child {
+		margin-bottom: 0;
+	}
+
+	blockquote p {
+		color: #999;
+		font-family: 700;
 		margin-bottom: 0;
 	}
 
