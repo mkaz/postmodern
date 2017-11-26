@@ -366,6 +366,10 @@ blockquote cite:before { content: '— '; }
 	}
 }
 
+section.content .wp-block-gallery {
+	max-width: $big-width;
+}
+
 .alignleft,
 .alignright {
     margin-bottom: 20px;
