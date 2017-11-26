@@ -104,6 +104,30 @@ table {
     width: 100%;
 }
 
+section.content table.wide,
+section.content h4.table-caption {
+	max-width: 1280px;
+}
+
+table.wide {
+	font-size: 0.80rem;
+	margin-bottom: 4.0rem;
+}
+
+table.wide th,
+table.wide td {
+	border: 1px solid #C0C0C0;
+    line-height: 1.2;
+	padding: 2px 8px;
+	margin: 0;
+}
+
+h4.table-caption {
+	font-size: 1.2rem;
+	margin: 0;
+	padding: 0;
+}
+
 ol, ul { list-style: none; }
 
 input[type='search']::-webkit-search-decoration,
