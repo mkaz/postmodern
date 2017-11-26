@@ -14,8 +14,9 @@ add_action( 'after_setup_theme', 'postmodern_setup' );
 
 function postmodern_load_style() {
     if ( ! is_admin() ) {
+        $version = filemtime( get_stylesheet_directory() . '/style.css' );
         wp_register_style( 'postmodern_fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700' );
-        wp_enqueue_style( 'postmodern_style', get_stylesheet_uri(), array( 'postmodern_fonts' ) );
+        wp_enqueue_style( 'postmodern_style', get_stylesheet_uri(), array( 'postmodern_fonts' ), $version );
         wp_enqueue_style( 'postmodern_font_awesome', get_stylesheet_directory_uri() . '/fa/css/font-awesome.min.css' );
     }
 }
