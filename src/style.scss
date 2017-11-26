@@ -367,10 +367,6 @@ blockquote cite:before { content: '— '; }
 	}
 }
 
-section.content .wp-block-gallery {
-	max-width: $big-width;
-}
-
 .alignleft,
 .alignright {
     margin-bottom: 20px;
@@ -402,6 +398,18 @@ section.content .wp-block-gallery {
 
 .aligncenter figcaption { text-align: center; }
 .alignright figcaption { text-align: right; }
+
+section.content .wp-block-gallery {
+	max-width: $big-width;
+}
+
+.columns-1 .blocks-gallery-image {
+    margin: 2.0rem 0;
+}
+
+.wp-block-mkaz-gutenpride {
+	margin: 4.0rem 0;
+}
 
 /* Inputs ----------------------------- */
 
