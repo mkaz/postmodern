@@ -350,6 +350,7 @@ blockquote cite:before { content: '— '; }
 		color: #666;
 	}
 
+	figure.wp-block-image img,
 	img.size-full {
 		max-width: $big-width;
 		width: 100%;
