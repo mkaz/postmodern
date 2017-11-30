@@ -354,7 +354,10 @@ blockquote cite:before { content: '— '; }
 	img.size-full {
 		max-width: $big-width;
 		width: 100%;
-		margin: 3.0rem auto;
+	}
+
+	img.size-full {
+		margin-top: 3.0rem auto;
 	}
 
 	figure {
