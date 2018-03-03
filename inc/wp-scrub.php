@@ -13,14 +13,6 @@ add_action( 'init', function() {
     remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 } );
 
-// remove wp embeds
-add_action( 'init', function() {
-    remove_action('rest_api_init', 'wp_oembed_register_route');
-    remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
-    remove_action('wp_head', 'wp_oembed_add_discovery_links');
-    remove_action('wp_head', 'wp_oembed_add_host_js');
-}, PHP_INT_MAX - 1 );
-
 // remove jetpack devicepx
 add_action( 'wp_enqueue_scripts', function() {
     wp_dequeue_script( 'devicepx' );
