@@ -32,6 +32,9 @@ $accent: #EC2D73;
 
 $full-width: 1440px;
 $big-width: 960px;
+$med-width: 640px;
+$sm-width: 480px;
+$tiny-width: 320px;
 $content-width: 720px;
 
 /* ----------------------------------------------------------------------------------- */
@@ -364,6 +367,7 @@ blockquote cite:before { content: '— '; }
 		margin-top: 3.0rem auto;
 	}
 
+
 	figure {
 		margin: 3.0rem auto;
 	}
@@ -372,6 +376,27 @@ blockquote cite:before { content: '— '; }
 	figure img.size-full {
 		width: 100%;
 		margin: 0 auto;
+	}
+
+	figure.wp-block-image img.size-med,
+	figure img.size-med,
+	img.size-med {
+		max-width: $med-width;
+		width: 100%;
+	}
+
+	figure.wp-block-image img.size-sm,
+	figure img.size-sm,
+	img.size-sm {
+		max-width: $sm-width;
+		width: 100%;
+	}
+
+	figure.wp-block-image img.size-tiny,
+	figure img.size-tiny,
+	img.size-tiny {
+		max-width: $tiny-width;
+		width: 100%;
 	}
 }
 
