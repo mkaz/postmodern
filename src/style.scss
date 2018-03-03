@@ -378,22 +378,19 @@ blockquote cite:before { content: '— '; }
 		margin: 0 auto;
 	}
 
-	figure.wp-block-image img.size-med,
-	figure img.size-med,
+	figure.size-med,
 	img.size-med {
 		max-width: $med-width;
 		width: 100%;
 	}
 
-	figure.wp-block-image img.size-sm,
-	figure img.size-sm,
+	figure.size-sm,
 	img.size-sm {
 		max-width: $sm-width;
 		width: 100%;
 	}
 
-	figure.wp-block-image img.size-tiny,
-	figure img.size-tiny,
+	figure.size-tiny,
 	img.size-tiny {
 		max-width: $tiny-width;
 		width: 100%;
