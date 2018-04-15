@@ -11,6 +11,6 @@
 	  "watch": "node-sass -w -o ./ src",
 	  "scss": "node-sass --output-style compact -o ./ src",
 	  "autoprefixer": "postcss -u autoprefixer -r ./style.css",
-	  "build:css": "yarn scss && yarn autoprefixer"
+	  "build:css": "npm run scss && npm run autoprefixer"
   }
 }
