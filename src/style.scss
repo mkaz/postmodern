@@ -357,23 +357,19 @@ blockquote cite:before { content: '— '; }
 		color: #666;
 	}
 
-	figure.wp-block-image img,
-	img.size-full {
+	figure.wp-block-image img {
 		max-width: $big-width;
 		width: 100%;
 	}
-
-	img.size-full {
-		margin-top: 3.0rem auto;
-	}
-
 
 	figure {
 		margin: 3.0rem auto;
 	}
 
 	figure img { margin: 0 auto; }
-	figure img.size-full {
+
+	figure.size-full img {
+		max-width: $full-width;
 		width: 100%;
 		margin: 0 auto;
 	}
