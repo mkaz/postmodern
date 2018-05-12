@@ -5,12 +5,13 @@
   "author": "Marcus Kazmierczak",
   "license": "CC-BY-NC-4.0",
   "devDependencies": {
+    "node-sass": "^4.9.0",
     "stylelint-no-unsupported-browser-features": "^1.0.0"
   },
   "scripts": {
-	  "watch": "node-sass -w -o ./ src",
-	  "scss": "node-sass --output-style compact -o ./ src",
-	  "autoprefixer": "postcss -u autoprefixer -r ./style.css",
-	  "build:css": "npm run scss && npm run autoprefixer"
+    "watch": "node-sass -w -o ./ src",
+    "scss": "node-sass --output-style compact -o ./ src",
+    "autoprefixer": "postcss -u autoprefixer -r ./style.css",
+    "build:css": "npm run scss && npm run autoprefixer"
   }
 }
