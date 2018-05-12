@@ -15,7 +15,7 @@
             <div class="site-branding">
                 <a href="<?php echo esc_url( home_url() ); ?>">
                     <?php echo get_avatar(
-                        'marcus@automattic.com', 64, null, 'Marcus Kazmierczak Profile Photo' );
+                        'marcus@automattic.com', 128, null, 'Marcus Kazmierczak Profile Photo' );
                     ?>
                 </a>
                 <div class="title">
