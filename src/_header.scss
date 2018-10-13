@@ -2,11 +2,9 @@
 header.global {
 	width: 100%;
 	height: $header-height;
-	margin: 0 auto 3.0rem auto;
+	margin: 0 auto 32px auto;
 	color: $header-fg;
-	background: url(sf-skyline.png);
 	background-color: $header-bg;
-	border-bottom: 1px solid $accent;
 
 	padding: 8px 16px 8px 16px;
 	display: flex;
@@ -24,15 +22,15 @@ header.global {
 			color: $header-fg;
 		}
 		a:hover {
-			color: $link-color;
+			color: $accent;
 		}
 
 		img.avatar {
 			display: block;
 			margin-right: 24px;
-			width: 128px;
-			height: 128px;
-			border-radius: 64px;
+			width: 96px;
+			height: 96px;
+			border-radius: 48px;
 			overflow: hidden;
 		}
 
@@ -47,7 +45,7 @@ header.global {
 				font-family: $article-font;
 				margin: 0;
 				padding: 0;
-				font-size: 3.2rem;
+				font-size: 2.8rem;
 				font-weight: 700;
 				line-height: 1.0;
 			}
@@ -55,7 +53,7 @@ header.global {
 			h4 {
 				margin: 0;
 				padding: 0;
-				font-size: 1.6rem;
+				font-size: 1.3rem;
 				font-weight: 400;
 			}
 		}
@@ -85,7 +83,7 @@ header.global {
 		}
 
 		a:hover {
-			color: $link-color;
+			color: $accent;
 		}
 
 		ul#menu-social-menu {

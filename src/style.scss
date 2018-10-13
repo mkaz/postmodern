@@ -20,25 +20,17 @@
 $default-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 $article-font: "Noto Serif", serif;
 
-/*
-Pink: #fe2c89;
-Yellow: #ffa94c;
-Peach: #fee6e2;
-Blue: #4fc3f7;
-Dark Blue: #082c44;
-*/
-
 
 $bg-color: white;
-$fg-color: #444444;
+$fg-color: #343536;
 
-$header-fg: white;
-$header-bg: #FA006D;
+$header-fg: #F6E5DE;
+$header-bg: #343536;
 
-$header-height: 240px;
+$header-height: 120px;
 
-$link-color: #4fc3f7;
-$accent: #fe2c89;
+$link-color: #1B6CD0;
+$accent: #D0221B;
 
 $full-width: 1440px;
 $big-width: 960px;
@@ -218,7 +210,7 @@ input:-ms-input-placeholder { color: #999; }
 @import 'indexpages';
 
 article {
-    display: block;
+	display: block;
     margin-bottom: 64px;
 
 	.title {

@@ -7,17 +7,15 @@
 
 <article <?php post_class( 'post' ); ?>>
 
-
-        <div class="featured-image">
-            <?php if ( has_post_thumbnail() ) : ?>
-    		    <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
-            <?php else : ?>
-                <div style="text-align:center">
-                    <span class="fa fa-photo" style="font-size:128px"></span>
-                </div>
-            <?php endif; ?>
-        </div>
-
+    <div class="featured-image">
+        <?php if ( has_post_thumbnail() ) : ?>
+            <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
+        <?php else : ?>
+            <div style="text-align:center">
+                <span class="fa fa-photo" style="font-size:128px"></span>
+            </div>
+        <?php endif; ?>
+    </div>
 
     <section class="post">
 
@@ -40,7 +38,7 @@
             <?php the_excerpt(); ?>
         </section>
 
-        <?php postmodern_get_tags(); ?>
+        <?php // postmodern_get_tags(); ?>
 
     </section>
 

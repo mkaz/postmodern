@@ -1,6 +1,6 @@
 <?php
 /**
- * Home, Archive, Category Template
+ * Archive, Category Template
  *
  * @package Postmodern
  */
