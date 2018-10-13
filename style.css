@@ -180,9 +180,9 @@ body.archive article section.content p, body.category article section.content p,
 
 body.home main { max-width: 1440px; margin: 0 auto; padding: 0 32px; }
 
-body.home section.articles { width: 100%; display: flex; flex-wrap: wrap; }
+body.home section.articles { width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; }
 
-body.home article { max-width: 360px; margin: 0 64px 64px 0; }
+body.home article { max-width: 360px; width: 100%; margin: 0 32px 32px 0; }
 
 body.home article .featured-image { margin: 4px auto 0 auto; padding-right: 1.5rem; height: 184px; overflow-y: hidden; }
 
@@ -192,23 +192,27 @@ body.home article .meta { margin: 0 0 8px 0; padding: 0; }
 
 body.home article p { margin: 16px 0 0 0; padding: 0; font-size: 1.0rem; }
 
-body.home section.featured { max-width: 1440px; width: 100%; margin: 0 auto 32px auto; display: flex; flex-wrap: wrap; }
+body.home section.featured { max-width: 1440px; width: 100%; margin: 0 auto 32px auto; display: flex; flex-wrap: wrap; justify-content: space-between; }
 
-body.home section.featured div.main-feature { max-width: 720px; width: 100%; margin: 0 64px 0 0; }
+div.main-feature { max-width: 720px; width: 100%; margin: 0 32px 0 0; }
 
-body.home section.featured div.main-feature img { width: 720px; height: 405px; -o-object-fit: cover; object-fit: cover; }
+div.main-feature img { width: 720px; height: 405px; -o-object-fit: cover; object-fit: cover; }
 
-body.home section.featured div.main-feature h2 { max-width: 720px; background-color: rgba(0, 0, 0, 0.75); margin-top: -120px; padding-right: 16px; position: absolute; color: white; }
+div.main-feature h2 { max-width: 100%; background-color: rgba(0, 0, 0, 0.75); margin: -120px 32px 0 0; padding-right: 16px; position: absolute; color: white; overflow: hidden; }
 
-body.home section.featured div.main-feature h2 a, body.home section.featured div.main-feature h2 a:visited { color: white; }
+div.main-feature h2 a, div.main-feature h2 a:visited { color: white; }
 
-body.home section.featured div.main-feature h2 a:hover { color: #D0221B; }
+div.main-feature h2 a:hover { color: #D0221B; }
 
-body.home section.featured div.second-feature { max-width: 320px; width: 100%; height: 240px; }
+div.second-feature { max-width: 420px; width: 100%; height: 280px; margin-right: 32px; }
 
-body.home section.featured div.second-feature h2 { margin: 0; line-height: 1; }
+div.second-feature h2 { margin: 0; line-height: 1; }
 
-@media only screen and (max-width: 1175px) { div.second-feature { display: none; } }
+@media only screen and (max-width: 1280px) { div.second-feature { display: none; }
+  body.home article { max-width: 480px; } }
+
+@media only screen and (max-width: 520px) { body.home article { margin: 0 0 64px 0; }
+  div.main-feature { margin: 0; } }
 
 article { display: block; margin-bottom: 64px; }
 
