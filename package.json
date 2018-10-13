@@ -11,7 +11,7 @@
   "scripts": {
     "watch": "node-sass -w -o ./ src",
     "scss": "node-sass --output-style compact -o ./ src",
-    "autoprefixer": "postcss -u autoprefixer -r ./style.css",
+    "autoprefixer": "postcss -u autoprefixer --no-map -r ./style.css",
     "build:css": "npm run scss && npm run autoprefixer"
   }
 }
