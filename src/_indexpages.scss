@@ -72,14 +72,14 @@ body.home section.articles {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 body.home article {
-    
+
     max-width: 360px;
     width: 100%;
-    margin: 0 32px 32px 0;
+    margin: 0 32px 64px 0;
 
     .featured-image {
         margin: 4px auto 0 auto;
@@ -109,7 +109,7 @@ body.home article {
 body.home section.featured {
     max-width: $full-width;
     width: 100%;
-    margin: 0 auto 32px auto;
+    margin: 0 auto 64px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -130,7 +130,7 @@ div.main-feature {
         max-width: 100%;
         background-color: rgba( 0, 0, 0, 0.75);
         margin: -120px 32px 0 0;
-        padding-right: 16px;
+        padding: 0 32px 0 8px;
         position: absolute;
         color: white;
         overflow: hidden;
@@ -174,7 +174,7 @@ div.second-feature {
     div.main-feature {
         margin: 0;
     }
-    
+
 }
 
 
