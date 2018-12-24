@@ -149,16 +149,27 @@ div.second-feature {
     width: 100%;
     height: 280px;
     margin-right: 32px;
+
     h2 {
+		font-size: 1.6rem;
+		font-family: $article_font;
         margin: 0;
         line-height: 1;
     }
+
+	h4 {
+		margin: -8px 0 0 0;
+		color: #AAAAAA;
+		font-size: 1.2rem;
+	}
+
 }
 
 
 @media only screen and ( max-width: 1280px ) {
     div.second-feature {
-        display: none;
+		margin: 16px auto 48px auto;
+		max-width: 480px;
     }
 
     body.home article {
