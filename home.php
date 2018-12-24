@@ -19,7 +19,7 @@ if ( $paged === 1 ):
 	<?php
 		$query = new WP_Query( array(
 			'tag' => 'featured',
-			'posts_per_page=1',
+			'posts_per_page' => '1',
 		));
 
 		if ( $query->have_posts() ) {
@@ -42,6 +42,7 @@ if ( $paged === 1 ):
 				</h2>
 		<?php } ?>
 	<?php } ?>
+	<?php wp_reset_postdata(); ?>
 	</div>
 
 	<div class="second-feature">
@@ -49,7 +50,7 @@ if ( $paged === 1 ):
 
 		$query = new WP_Query( array(
 			'tag' => 'dailyphoto',
-			'posts_per_page=1',
+			'posts_per_page' => '1',
 		));
 
 		if ( $query->have_posts() ) {

@@ -192,7 +192,7 @@ body.home article .meta { margin: 0 0 8px 0; padding: 0; }
 
 body.home article p { margin: 16px 0 0 0; padding: 0; font-size: 1.0rem; }
 
-body.home section.featured { max-width: 1440px; width: 100%; margin: 0 auto 64px auto; display: flex; flex-wrap: wrap; justify-content: space-between; }
+body.home section.featured { max-width: 1440px; width: 100%; margin: 0 auto 32px auto; display: flex; flex-wrap: wrap; justify-content: space-between; overflow: hidden; }
 
 div.main-feature { max-width: 720px; width: 100%; margin: 0 32px 0 0; }
 
@@ -204,13 +204,14 @@ div.main-feature h2 a, div.main-feature h2 a:visited { color: white; }
 
 div.main-feature h2 a:hover { color: #D0221B; }
 
-div.second-feature { max-width: 420px; width: 100%; height: 280px; margin-right: 32px; }
+div.second-feature { max-width: 420px; width: 100%; margin-right: 32px; }
 
 div.second-feature h2 { font-size: 1.6rem; font-family: "Noto Serif", serif; margin: 0; line-height: 1; }
 
 div.second-feature h4 { margin: -8px 0 0 0; color: #AAAAAA; font-size: 1.2rem; }
 
-@media only screen and (max-width: 1280px) { div.second-feature { margin: 16px auto 48px auto; max-width: 480px; }
+@media only screen and (max-width: 1280px) { body.home section.featured { margin-bottom: 16px; }
+  div.second-feature { margin: 16px auto 16px auto; max-width: 480px; }
   body.home article { max-width: 480px; } }
 
 @media only screen and (max-width: 520px) { body.home article { margin: 0 0 64px 0; }
@@ -255,7 +256,7 @@ blockquote cite:before { content: '— '; }
 
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 { padding: 0 1.0rem; }
 
-.post p { line-height: 1.55; margin: 3.0rem 0 3.0rem 0; padding: 0 1.0rem; }
+.post p { line-height: 1.55; margin: 1.5rem 0 1.5rem 0; padding: 0 1.0rem; }
 
 .post p:last-child { margin-bottom: 0; }
 
