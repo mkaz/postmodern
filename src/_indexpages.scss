@@ -19,7 +19,6 @@ body.search article {
 
     .featured-image {
         margin: 4px 0 0 0;
-        padding-right: 1.5rem;
         width: 276px;
         height: 184px;
         overflow-y: hidden;
@@ -79,11 +78,10 @@ body.home article {
 
     max-width: 360px;
     width: 100%;
-    margin: 0 32px 64px 0;
+    margin: 0 0 64px 0;
 
     .featured-image {
         margin: 4px auto 0 auto;
-        padding-right: 1.5rem;
         height: 184px;
         overflow-y: hidden;
     }
@@ -168,6 +166,7 @@ div.second-feature {
 
 @media only screen and ( max-width: 1280px ) {
 	body.home section.featured {
+		margin-right: 0;
 		margin-bottom: 16px;
 	}
 
