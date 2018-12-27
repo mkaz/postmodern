@@ -414,6 +414,15 @@ blockquote cite:before { content: '— '; }
 .aligncenter,
 .alignnone { margin: 0 auto; }
 
+/* Likes Widget----------------------- */
+.jetpack-likes-widget-wrapper {
+	padding-left: 1.0rem;
+
+	.sd-title {
+		padding-left: 0;
+	}
+}
+
 /* Media ----------------------------- */
 
 .full-width img {
