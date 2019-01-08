@@ -204,7 +204,9 @@ div.second-feature { max-width: 420px; width: 100%; margin-right: 32px; }
 
 div.second-feature h2 { font-size: 1.6rem; font-family: "Noto Serif", serif; margin: 0; line-height: 1; }
 
-div.second-feature h4 { margin: -8px 0 0 0; color: #AAAAAA; font-size: 1.2rem; }
+div.second-feature h4 { margin: -8px 0 0 0; }
+
+div.second-feature h4, div.second-feature .dailylink { color: #AAAAAA; font-size: 1.2rem; }
 
 @media only screen and (max-width: 1280px) { body.home section.featured { margin-right: 0; margin-bottom: 16px; }
   div.second-feature { margin: 32px 0; max-width: 480px; }

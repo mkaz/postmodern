@@ -52,12 +52,16 @@ if ( $paged === 1 ):
 		'posts_per_page' => '1',
 	));
 
+	// need tag id to build link
+	$tag = get_term_by('slug', 'dailyphoto','post_tag');
+	$tag_id = $tag->term_id;
+
 	if ( $query->have_posts() ) {
 	   while ( $query->have_posts() ) {
 		   $query->the_post(); ?>
 
 			<div class="featured-image">
-				<h4> DAILY PHOTO </h4>
+				<h4><a href="<?php echo get_tag_link( $tag_id ); ?>" class="dailylink">DAILY PHOTO </a></h4>
 				<?php if ( has_post_thumbnail() ) : ?>
 					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
 				<?php else : ?>
