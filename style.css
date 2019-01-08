@@ -160,7 +160,7 @@ header.global nav ul#menu-social-menu a[href*='spotify.com']::before { content: 
   header.global div.site-branding .title h3 { font-size: 2.2rem; }
   header.global div.site-branding .title h4 { font-size: 1.2rem; } }
 
-body.archive main, body.category main, body.search main { max-width: 1440px; display: flex; flex-wrap: wrap; justify-content: space-around; }
+body.archive main, body.category main, body.search main { max-width: 1440px; }
 
 body.archive article, body.category article, body.search article { max-width: 720px; margin: 0 auto 2.0rem auto; border-bottom: 1px solid #CCC; padding: 0 0 2.0rem 1.0rem; display: flex; flex-wrap: wrap; }
 
@@ -178,11 +178,9 @@ body.archive article section.content p, body.category article section.content p,
 
 @media only screen and (max-width: 708px) { body.archive article .featured-image, body.category article .featured-image, body.search article .featured-image { margin: 4px auto 16px auto; max-width: 390px; } }
 
-body.home main { max-width: 1440px; margin: 0 auto; padding: 0 32px; }
+body.home main { max-width: 1440px; width: 100%; margin: 0 auto; padding: 0 32px; display: flex; flex-wrap: wrap; justify-content: space-between; }
 
-body.home section.articles { width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; }
-
-body.home article { max-width: 360px; width: 100%; margin: 0 0 64px 0; }
+body.home article { max-width: 360px; width: 100%; margin: 32px 0 32px 0; }
 
 body.home article .featured-image { margin: 4px auto 0 auto; height: 184px; overflow-y: hidden; }
 
@@ -191,8 +189,6 @@ body.home article h2.title { font-size: 1.6rem; margin: 8px 0 8px 0; padding: 0;
 body.home article .meta { margin: 0 0 8px 0; padding: 0; }
 
 body.home article p { margin: 16px 0 0 0; padding: 0; font-size: 1.0rem; }
-
-body.home section.featured { max-width: 1440px; width: 100%; margin: 0 auto 32px auto; display: flex; flex-wrap: wrap; justify-content: space-between; overflow: hidden; }
 
 div.main-feature { max-width: 720px; width: 100%; margin: 0 32px 0 0; }
 
@@ -211,11 +207,13 @@ div.second-feature h2 { font-size: 1.6rem; font-family: "Noto Serif", serif; mar
 div.second-feature h4 { margin: -8px 0 0 0; color: #AAAAAA; font-size: 1.2rem; }
 
 @media only screen and (max-width: 1280px) { body.home section.featured { margin-right: 0; margin-bottom: 16px; }
-  div.second-feature { margin: 16px auto 16px auto; max-width: 480px; }
-  body.home article { max-width: 480px; } }
+  div.second-feature { margin: 32px 0; max-width: 480px; }
+  body.home article { max-width: 480px; }
+  body.home article:first-of-type { margin-top: 54px; } }
 
-@media only screen and (max-width: 520px) { body.home article { margin: 0 0 64px 0; }
-  div.main-feature { margin: 0; } }
+@media only screen and (max-width: 520px) { body.home article { margin: 32px 0 32px 0; }
+  div.main-feature { margin: 0; }
+  body.home article:first-of-type { margin-top: 32px; } }
 
 article { display: block; margin-bottom: 64px; }
 

@@ -13,103 +13,97 @@ get_template_part( 'template-parts/header' ); ?>
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 if ( $paged === 1 ):
 ?>
-<section class="featured">
 
-	<div class="main-feature">
-	<?php
-		$query = new WP_Query( array(
-			'tag' => 'featured',
-			'posts_per_page' => '1',
-		));
+<div class="main-feature">
+<?php
+	$query = new WP_Query( array(
+		'tag' => 'featured',
+		'posts_per_page' => '1',
+	));
 
-		if ( $query->have_posts() ) {
-		   while ( $query->have_posts() ) {
-			   $query->the_post(); ?>
+	if ( $query->have_posts() ) {
+	   while ( $query->have_posts() ) {
+		   $query->the_post(); ?>
 
-				<div class="featured-image">
-					<?php if ( has_post_thumbnail() ) : ?>
-						<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
-					<?php else : ?>
-						<div style="text-align:center">
-							<span class="fa fa-photo" style="font-size:128px"></span>
-						</div>
-					<?php endif; ?>
-				</div>
-				<h2>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-						<?php the_title(); ?>
-					</a>
-				</h2>
-		<?php } ?>
+			<div class="featured-image">
+				<?php if ( has_post_thumbnail() ) : ?>
+					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
+				<?php else : ?>
+					<div style="text-align:center">
+						<span class="fa fa-photo" style="font-size:128px"></span>
+					</div>
+				<?php endif; ?>
+			</div>
+			<h2>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<?php the_title(); ?>
+				</a>
+			</h2>
 	<?php } ?>
-	<?php wp_reset_postdata(); ?>
-	</div>
+<?php } ?>
+<?php wp_reset_postdata(); ?>
+</div>
 
-	<div class="second-feature">
-	<?php
+<div class="second-feature">
+<?php
 
-		$query = new WP_Query( array(
-			'tag' => 'dailyphoto',
-			'posts_per_page' => '1',
-		));
+	$query = new WP_Query( array(
+		'tag' => 'dailyphoto',
+		'posts_per_page' => '1',
+	));
 
-		if ( $query->have_posts() ) {
-		   while ( $query->have_posts() ) {
-			   $query->the_post(); ?>
+	if ( $query->have_posts() ) {
+	   while ( $query->have_posts() ) {
+		   $query->the_post(); ?>
 
-				<div class="featured-image">
-					<h4> DAILY PHOTO </h4>
-					<?php if ( has_post_thumbnail() ) : ?>
-						<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
-					<?php else : ?>
-						<div style="text-align:center">
-							<span class="fa fa-photo" style="font-size:128px"></span>
-						</div>
-					<?php endif; ?>
-				</div>
-				<h2 class="title">
-					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-						<?php the_title(); ?>
-					</a>
-				</h2>
-		<?php } ?>
+			<div class="featured-image">
+				<h4> DAILY PHOTO </h4>
+				<?php if ( has_post_thumbnail() ) : ?>
+					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
+				<?php else : ?>
+					<div style="text-align:center">
+						<span class="fa fa-photo" style="font-size:128px"></span>
+					</div>
+				<?php endif; ?>
+			</div>
+			<h2 class="title">
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<?php the_title(); ?>
+				</a>
+			</h2>
 	<?php } ?>
-	</div>
-</section>
+<?php } ?>
+</div>
 <?php wp_reset_postdata(); ?>
 <?php endif; ?>
 
-
-<section class="articles">
-
-	<?php
-	$args = array(
-		'tax_query' => array(
-			array(
-				'taxonomy' => 'post_tag',
-				'field'    => 'slug',
-				'terms'    => 'dailyphoto',
-				'operator' => 'NOT IN',
-			),
+<?php
+$args = array(
+	'tax_query' => array(
+		array(
+			'taxonomy' => 'post_tag',
+			'field'    => 'slug',
+			'terms'    => 'dailyphoto',
+			'operator' => 'NOT IN',
 		),
-	);
-	$query = new WP_Query( $args );
+	),
+);
+$query = new WP_Query( $args );
 
-	if ( $query->have_posts() ) {
-		while ( $query->have_posts() ) {
-			$query->the_post();
-			get_template_part( 'template-parts/content', 'excerpt' );
-		}
-		wp_reset_postdata();
+if ( $query->have_posts() ) {
+	while ( $query->have_posts() ) {
+		$query->the_post();
+		get_template_part( 'template-parts/content', 'excerpt' );
 	}
-    else { ?>
+	wp_reset_postdata();
+}
+else { ?>
 
-        <div class="post">
-            <p><?php _e( 'Sorry, the page you requested cannot be found.', 'postmodern' ); ?></p>
-        </div>
+	<div class="post">
+		<p><?php _e( 'Sorry, the page you requested cannot be found.', 'postmodern' ); ?></p>
+	</div>
 
-    <?php } ?>
-</section>
+<?php } ?>
 
 </main>
 
