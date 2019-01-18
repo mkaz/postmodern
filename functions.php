@@ -78,6 +78,14 @@ function img_unautop($pee) {
 }
 add_filter( 'the_content', 'img_unautop', 30 );
 
+function postmodern_remove_archive_tag_page( $wp_classes ) {
+	if ( is_tag() ) {
+		unset( $wp_classes[ array_search( 'archive', $wp_classes ) ] );
+	}
+	return $wp_classes;
+}
+add_filter( 'body_class', 'postmodern_remove_archive_tag_page', 20, 2 );
+
 
 function postmodern_get_tags() {
     global $post;
