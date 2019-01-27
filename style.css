@@ -298,6 +298,8 @@ blockquote cite:before { content: '— '; }
 
 .post figure.size-tiny, .post img.size-tiny { max-width: 320px; width: 100%; }
 
+.post .wp-block-embed-wordpress { max-width: 500px; }
+
 .alignleft, .alignright { margin-bottom: 20px; max-width: 50%; }
 
 .alignleft { float: left; margin-right: 20px; }
