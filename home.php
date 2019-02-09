@@ -14,37 +14,26 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 if ( $paged === 1 ):
 ?>
 
-<div class="main-feature">
-<?php
-	$query = new WP_Query( array(
-		'tag' => 'featured',
-		'posts_per_page' => '1',
-	));
+<section class="feature">
+	<?php
+		$cat_id = get_cat_ID( 'series' );
+		$query = new WP_Query( array(
+			'cat' => $cat_id,
+			'posts_per_page' => '1',
+		));
 
-	if ( $query->have_posts() ) {
-	   while ( $query->have_posts() ) {
-		   $query->the_post(); ?>
+		if ( $query->have_posts() ) :
+		   while ( $query->have_posts() ) :
+			   $query->the_post(); ?>
+				<h4><a href="<?php echo get_category_link( $cat_id ); ?>">SERIES </a></h4>
+				<?php get_template_part( 'template-parts/content', 'excerpt' ); ?>
+			<?php endwhile;
+		endif;
+		wp_reset_postdata();
+	?>
+</section>
 
-			<div class="featured-image">
-				<?php if ( has_post_thumbnail() ) : ?>
-					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
-				<?php else : ?>
-					<div style="text-align:center">
-						<span class="fa fa-photo" style="font-size:128px"></span>
-					</div>
-				<?php endif; ?>
-			</div>
-			<h2>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<?php the_title(); ?>
-				</a>
-			</h2>
-	<?php } ?>
-<?php } ?>
-<?php wp_reset_postdata(); ?>
-</div>
-
-<div class="second-feature">
+<section class="feature">
 <?php
 
 	$query = new WP_Query( array(
@@ -56,28 +45,14 @@ if ( $paged === 1 ):
 	$tag = get_term_by('slug', 'dailyphoto','post_tag');
 	$tag_id = $tag->term_id;
 
-	if ( $query->have_posts() ) {
-	   while ( $query->have_posts() ) {
+	if ( $query->have_posts() ) :
+	   while ( $query->have_posts() ) :
 		   $query->the_post(); ?>
-
-			<div class="featured-image">
-				<h4><a href="<?php echo get_tag_link( $tag_id ); ?>" class="dailylink">DAILY PHOTO </a></h4>
-				<?php if ( has_post_thumbnail() ) : ?>
-					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
-				<?php else : ?>
-					<div style="text-align:center">
-						<span class="fa fa-photo" style="font-size:128px"></span>
-					</div>
-				<?php endif; ?>
-			</div>
-			<h2 class="title">
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<?php the_title(); ?>
-				</a>
-			</h2>
-	<?php } ?>
-<?php } ?>
-</div>
+			<h4><a href="<?php echo get_tag_link( $tag_id ); ?>">DAILY PHOTO </a></h4>
+			<?php get_template_part( 'template-parts/content', 'excerpt' ); ?>
+	<?php endwhile; ?>
+<?php endif; ?>
+</section>
 <?php wp_reset_postdata(); ?>
 <?php endif; ?>
 

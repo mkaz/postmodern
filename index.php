@@ -7,6 +7,16 @@
 
 get_template_part( 'template-parts/header' ); ?>
 
+<?php if ( is_category() ) : ?>
+	<?php
+		$categories = get_the_category();
+		$category_name = $categories[0]->name;
+	?>
+	<section class="header">
+		<h1> <?php echo esc_html( $category_name ); ?></h1>
+	</section>
+<?php endif; ?>
+
 <main>
 <?php if ( have_posts() ) :
     while ( have_posts() ) : the_post();

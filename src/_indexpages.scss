@@ -1,63 +1,14 @@
+section.header {
+	max-width: $full-width;
+	margin: 0 auto;
+	padding: 0 32px;
+
+	h1 { margin-bottom: 0; }
+}
+
 body.archive main,
 body.category main,
-body.search main {
-    max-width: $full-width;
-}
-
-body.archive article,
-body.category article,
-body.search article {
-    max-width: $content-width;
-    margin: 0 auto 2.0rem auto;
-    border-bottom: 1px solid #CCC;
-    padding: 0 0 2.0rem 1.0rem;
-    display: flex;
-    flex-wrap: wrap;
-
-    .featured-image {
-        margin: 4px 0 0 0;
-        width: 276px;
-        height: 184px;
-        overflow-y: hidden;
-    }
-
-    .meta {
-        margin: 0 0 8px 0;
-        padding: 0;
-    }
-
-    .post-tags a, .post-tags a:visited {
-        opacity: 0.8;
-        font-size: 0.9rem;
-        margin: 0 6px;
-    }
-
-    section.post {
-        width: 360px;
-        font-size: 1.0rem;
-    }
-
-    h2.title {
-        font-size: 1.8rem;
-        margin: 0 0 8px 0;
-        padding: 0;
-    }
-
-    section.content p {
-        margin: 1.0rem 0;
-        padding: 0;
-        color: #777;
-        min-height: 70px;
-    }
-
-    @media only screen and ( max-width: 708px ) {
-        .featured-image {
-            margin: 4px auto 16px auto;
-            max-width: 390px;
-        }
-    }
-}
-
+body.search main,
 body.home main {
     max-width: $full-width;
 	width: 100%;
@@ -68,7 +19,9 @@ body.home main {
     justify-content: space-between;
 }
 
-
+body.archive article,
+body.category article,
+body.search article,
 body.home article {
 
     max-width: 360px;
@@ -99,69 +52,19 @@ body.home article {
     }
 }
 
-div.main-feature {
-    max-width: 720px;
-    width: 100%;
-    margin: 0 32px 0 0;
-
-    img {
-        width: 720px;
-        height: 405px;
-        object-fit: cover;
-    }
-
-    h2 {
-        max-width: 100%;
-        background-color: rgba( 0, 0, 0, 0.75);
-        margin: -120px 32px 0 0;
-        padding: 0 32px 0 8px;
-        position: absolute;
-        color: white;
-        overflow: hidden;
-
-        a, a:visited {
-            color: white;
-        }
-        a:hover {
-            color: $accent;
-        }
-    }
-}
-
-div.second-feature {
-    max-width: 420px;
-    width: 100%;
-    margin-right: 32px;
-
-    h2 {
-		font-size: 1.6rem;
-		font-family: $article_font;
-        margin: 0;
-        line-height: 1;
-    }
-
-	h4 {
-		margin: -8px 0 0 0;
-	}
-
-	h4, .dailylink {
+h4 {
+	margin: -8px 0 0 0;
+	a, a:visited {
 		color: #AAAAAA;
 		font-size: 1.2rem;
 	}
-
 }
 
+section.feature article {
+	margin-top: 0;
+}
 
 @media only screen and ( max-width: 1280px ) {
-	body.home section.featured {
-		margin-right: 0;
-		margin-bottom: 16px;
-	}
-
-    div.second-feature {
-		margin: 32px 0;
-		max-width: 480px;
-    }
 
     body.home article {
         max-width: 480px;
