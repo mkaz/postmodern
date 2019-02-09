@@ -32,7 +32,7 @@ $header-height: 120px;
 $link-color: #1B6CD0;
 $accent: #D0221B;
 
-$full-width: 1440px;
+$full-width: 1280px;
 $big-width: 960px;
 $med-width: 640px;
 $sm-width: 480px;
@@ -450,6 +450,9 @@ section.content .wp-block-gallery {
 
 .wp-block-mkaz-gutenpride {
 	margin: 4.0rem 0;
+}
+figure.juxtapose {
+	max-width: $big-width;
 }
 
 /* Inputs ----------------------------- */

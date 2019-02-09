@@ -160,7 +160,7 @@ header.global nav ul#menu-social-menu a[href*='spotify.com']::before { content: 
   header.global div.site-branding .title h3 { font-size: 2.2rem; }
   header.global div.site-branding .title h4 { font-size: 1.2rem; } }
 
-body.archive main, body.category main, body.search main { max-width: 1440px; }
+body.archive main, body.category main, body.search main { max-width: 1280px; }
 
 body.archive article, body.category article, body.search article { max-width: 720px; margin: 0 auto 2.0rem auto; border-bottom: 1px solid #CCC; padding: 0 0 2.0rem 1.0rem; display: flex; flex-wrap: wrap; }
 
@@ -178,7 +178,7 @@ body.archive article section.content p, body.category article section.content p,
 
 @media only screen and (max-width: 708px) { body.archive article .featured-image, body.category article .featured-image, body.search article .featured-image { margin: 4px auto 16px auto; max-width: 390px; } }
 
-body.home main { max-width: 1440px; width: 100%; margin: 0 auto; padding: 0 32px; display: flex; flex-wrap: wrap; justify-content: space-between; }
+body.home main { max-width: 1280px; width: 100%; margin: 0 auto; padding: 0 32px; display: flex; flex-wrap: wrap; justify-content: space-between; }
 
 body.home article { max-width: 360px; width: 100%; margin: 32px 0 32px 0; }
 
@@ -290,7 +290,7 @@ blockquote cite:before { content: '— '; }
 
 .post figure img { margin: 0 auto; }
 
-.post figure.size-full img { max-width: 1440px; width: 100%; margin: 0 auto; }
+.post figure.size-full img { max-width: 1280px; width: 100%; margin: 0 auto; }
 
 .post figure.size-med, .post img.size-med { max-width: 640px; width: 100%; }
 
@@ -314,7 +314,7 @@ blockquote cite:before { content: '— '; }
 .jetpack-likes-widget-wrapper .sd-title { padding-left: 0; }
 
 /* Media ----------------------------- */
-.full-width img { display: block; max-width: 1440px; width: 100%; margin-left: auto; margin-right: auto; }
+.full-width img { display: block; max-width: 1280px; width: 100%; margin-left: auto; margin-right: auto; }
 
 .aligncenter figcaption { text-align: center; }
 
@@ -325,6 +325,8 @@ section.content .wp-block-gallery { max-width: 960px; }
 .columns-1 .blocks-gallery-image { margin: 2.0rem 0; }
 
 .wp-block-mkaz-gutenpride { margin: 4.0rem 0; }
+
+figure.juxtapose { max-width: 960px; }
 
 /* Inputs ----------------------------- */
 fieldset { border: 1px solid #CCCCCC; padding: 25px; }
